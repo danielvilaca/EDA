@@ -1,0 +1,33 @@
+\doxysection{antena.\+h}
+\hypertarget{antena_8h_source}{}\label{antena_8h_source}\mbox{\hyperlink{antena_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00012}00012\ \textcolor{preprocessor}{\#ifndef\ ANTENA\_H}}
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00013}00013\ \textcolor{preprocessor}{\#define\ ANTENA\_H}}
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00020}\mbox{\hyperlink{struct_antena}{00020}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_antena}{Antena}}\ \{}
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00021}\mbox{\hyperlink{struct_antena_acbb0ceb3114405ec0fd07f67b79bd3e5}{00021}}\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_antena_acbb0ceb3114405ec0fd07f67b79bd3e5}{freq}};}
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00022}\mbox{\hyperlink{struct_antena_ad28f77663b945c81f26e84c1b62cb63f}{00022}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_antena_a2913fa9623f812bffff810528877ee24}{linha}},\ \mbox{\hyperlink{struct_antena_ad28f77663b945c81f26e84c1b62cb63f}{coluna}};}
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00023}\mbox{\hyperlink{struct_antena_ae518c9afee14b875ac030364762e23ba}{00023}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_antena}{Antena}}\ *\mbox{\hyperlink{struct_antena_ae518c9afee14b875ac030364762e23ba}{next}};}
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00024}\mbox{\hyperlink{antena_8h_a843ab8b81393e8ebb3eb6b76e349acc2}{00024}}\ \}\ \mbox{\hyperlink{struct_antena}{Antena}};}
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00035}00035\ \mbox{\hyperlink{struct_antena}{Antena}}\ *\mbox{\hyperlink{antena_8h_a00a386a23b9f361d1f4c1cb0e735ca5d}{criarAntena}}(\textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_antena_acbb0ceb3114405ec0fd07f67b79bd3e5}{freq}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_antena_a2913fa9623f812bffff810528877ee24}{linha}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_antena_ad28f77663b945c81f26e84c1b62cb63f}{coluna}});}
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00046}00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{antena_8h_acc0269270f879978a2b329a200244697}{inserirAntena}}(\mbox{\hyperlink{struct_antena}{Antena}}\ **aux,\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_antena_acbb0ceb3114405ec0fd07f67b79bd3e5}{freq}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_antena_a2913fa9623f812bffff810528877ee24}{linha}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_antena_ad28f77663b945c81f26e84c1b62cb63f}{coluna}});}
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00056}00056\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{antena_8h_ae669c21caa03887ddee7c957a10fbf40}{removerAntena}}(\mbox{\hyperlink{struct_antena}{Antena}}\ **aux,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_antena_a2913fa9623f812bffff810528877ee24}{linha}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_antena_ad28f77663b945c81f26e84c1b62cb63f}{coluna}});}
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00064}\mbox{\hyperlink{antena_8h_a2a18909c27210e17ff28c6b4c8aa29a7}{00064}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{antena_8h_a2a18909c27210e17ff28c6b4c8aa29a7}{listarAntenas}}(\mbox{\hyperlink{struct_antena}{Antena}}\ *aux);}
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00072}00072\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{antena_8h_a66ea723ccc8f6e107b0c215c4b2dd28f}{libertarAntenas}}(\mbox{\hyperlink{struct_antena}{Antena}}\ *aux);}
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{antena_8h_source_l00074}00074\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,412 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_antena_8h" xml:lang="en-US">
+<title>antena.h File Reference</title>
+<indexterm><primary>antena.h</primary></indexterm>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="antena_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_antena">Antena</link></para>
+
+<para>Estrutura que representa uma antena. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_antena_8h_1a843ab8b81393e8ebb3eb6b76e349acc2"/>typedef struct Antena <emphasis role="strong">Antena</emphasis></para>
+
+<para>Estrutura que representa uma antena. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_antena">Antena</link> * <link linkend="_antena_8h_1a00a386a23b9f361d1f4c1cb0e735ca5d">criarAntena</link> (char freq, int linha, int coluna)</para>
+
+<para>Função que cria uma nova antena. </para>
+</listitem>
+            <listitem><para>void <link linkend="_antena_8h_1acc0269270f879978a2b329a200244697">inserirAntena</link> (<link linkend="_struct_antena">Antena</link> **aux, char freq, int linha, int coluna)</para>
+
+<para>Função que insere uma nova antena na lista. </para>
+</listitem>
+            <listitem><para>void <link linkend="_antena_8h_1ae669c21caa03887ddee7c957a10fbf40">removerAntena</link> (<link linkend="_struct_antena">Antena</link> **aux, int linha, int coluna)</para>
+
+<para>Função que remove uma antena localizada numa posição especifica da matriz. </para>
+</listitem>
+            <listitem><para>void <link linkend="_antena_8h_1a2a18909c27210e17ff28c6b4c8aa29a7">listarAntenas</link> (<link linkend="_struct_antena">Antena</link> *aux)</para>
+
+<para>Lista todas as antenas presentes na lista ligada. </para>
+</listitem>
+            <listitem><para>void <link linkend="_antena_8h_1a66ea723ccc8f6e107b0c215c4b2dd28f">libertarAntenas</link> (<link linkend="_struct_antena">Antena</link> *aux)</para>
+
+<para>Liberta a memória ocupada por todas as antenas da lista. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><formalpara><title>Author</title>
+
+<para>Daniel Vilaça (<link xlink:href="mailto:a16939@alunos.ipca.pt">a16939@alunos.ipca.pt</link>) </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>2025-03-30</para>
+</formalpara>
+<formalpara><title>Copyright</title>
+
+<para>Copyright (c) 2025 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_antena_8h_source">antena.h</link>.</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_antena_8h_1a00a386a23b9f361d1f4c1cb0e735ca5d"/><section>
+    <title>criarAntena()</title>
+<indexterm><primary>criarAntena</primary><secondary>antena.h</secondary></indexterm>
+<indexterm><primary>antena.h</primary><secondary>criarAntena</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_antena">Antena</link> * criarAntena (char freq, int linha, int coluna)</computeroutput></para><para>
+
+<para>Função que cria uma nova antena. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>freq</entry><entry>
+<para>Char que representa a frequência/tipo de antena </para>
+</entry>
+                            </row>
+                            <row>
+<entry>linha</entry><entry>
+<para>Linha da matriz onde a antena será colocada </para>
+</entry>
+                            </row>
+                            <row>
+<entry>coluna</entry><entry>
+<para>Coluna da matriz onde a antena será colocada </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Antena* Apontador para a nova antena criada</para>
+</formalpara>
+Função que cria uma nova antena.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>freq</entry><entry>
+<para>Char que representa a frequência/tipo de antena </para>
+</entry>
+                            </row>
+                            <row>
+<entry>linha</entry><entry>
+<para>Linha da matriz onde a antena será colocada </para>
+</entry>
+                            </row>
+                            <row>
+<entry>coluna</entry><entry>
+<para>Coluna da matriz onde a antena será colocada </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Antena* Apontador para a nova antena criada </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_antena_8c_source_1l00026">26</link> of file <link linkend="_antena_8c_source">antena.c</link>.</para>
+</section>
+<anchor xml:id="_antena_8h_1acc0269270f879978a2b329a200244697"/><section>
+    <title>inserirAntena()</title>
+<indexterm><primary>inserirAntena</primary><secondary>antena.h</secondary></indexterm>
+<indexterm><primary>antena.h</primary><secondary>inserirAntena</secondary></indexterm>
+<para><computeroutput>void inserirAntena (<link linkend="_struct_antena">Antena</link> ** aux, char freq, int linha, int coluna)</computeroutput></para><para>
+
+<para>Função que insere uma nova antena na lista. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>aux</entry><entry>
+<para>Apontador para o apontador da lista de antenas </para>
+</entry>
+                            </row>
+                            <row>
+<entry>freq</entry><entry>
+<para>Char que representa a frequência/tipo da nova antena </para>
+</entry>
+                            </row>
+                            <row>
+<entry>linha</entry><entry>
+<para>Linha onde será inserida </para>
+</entry>
+                            </row>
+                            <row>
+<entry>coluna</entry><entry>
+<para>Coluna onde será inserida</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Função que insere uma nova antena na lista.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>aux</entry><entry>
+<para>Apontador para o apontador da lista de antenas </para>
+</entry>
+                            </row>
+                            <row>
+<entry>freq</entry><entry>
+<para>Char que representa a frequência/tipo de antena </para>
+</entry>
+                            </row>
+                            <row>
+<entry>linha</entry><entry>
+<para>Linha onde será inserida </para>
+</entry>
+                            </row>
+                            <row>
+<entry>coluna</entry><entry>
+<para>Coluna onde será inserida </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_antena_8c_source_1l00048">48</link> of file <link linkend="_antena_8c_source">antena.c</link>.</para>
+</section>
+<anchor xml:id="_antena_8h_1a66ea723ccc8f6e107b0c215c4b2dd28f"/><section>
+    <title>libertarAntenas()</title>
+<indexterm><primary>libertarAntenas</primary><secondary>antena.h</secondary></indexterm>
+<indexterm><primary>antena.h</primary><secondary>libertarAntenas</secondary></indexterm>
+<para><computeroutput>void libertarAntenas (<link linkend="_struct_antena">Antena</link> * aux)</computeroutput></para><para>
+
+<para>Liberta a memória ocupada por todas as antenas da lista. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>aux</entry><entry>
+<para>Apontador para a lista de antenas.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Liberta a memória ocupada por todas as antenas da lista.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>aux</entry><entry>
+<para>Apontador para a lista de antenas </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_antena_8c_source_1l00106">106</link> of file <link linkend="_antena_8c_source">antena.c</link>.</para>
+</section>
+<anchor xml:id="_antena_8h_1a2a18909c27210e17ff28c6b4c8aa29a7"/><section>
+    <title>listarAntenas()</title>
+<indexterm><primary>listarAntenas</primary><secondary>antena.h</secondary></indexterm>
+<indexterm><primary>antena.h</primary><secondary>listarAntenas</secondary></indexterm>
+<para><computeroutput>void listarAntenas (<link linkend="_struct_antena">Antena</link> * aux)</computeroutput></para><para>
+
+<para>Lista todas as antenas presentes na lista ligada. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>aux</entry><entry>
+<para>Apontador para a lista de antenas </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_antena_8h_1ae669c21caa03887ddee7c957a10fbf40"/><section>
+    <title>removerAntena()</title>
+<indexterm><primary>removerAntena</primary><secondary>antena.h</secondary></indexterm>
+<indexterm><primary>antena.h</primary><secondary>removerAntena</secondary></indexterm>
+<para><computeroutput>void removerAntena (<link linkend="_struct_antena">Antena</link> ** aux, int linha, int coluna)</computeroutput></para><para>
+
+<para>Função que remove uma antena localizada numa posição especifica da matriz. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>lista</entry><entry>
+<para>Apontador para o apontador da lista de antenas </para>
+</entry>
+                            </row>
+                            <row>
+<entry>linha</entry><entry>
+<para>Linha da antena a remover </para>
+</entry>
+                            </row>
+                            <row>
+<entry>coluna</entry><entry>
+<para>Coluna da antena a remover</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Função que remove uma antena localizada numa posição especifica da matriz.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>aux</entry><entry>
+<para>Apontador para o apontador da lista de antenas </para>
+</entry>
+                            </row>
+                            <row>
+<entry>linha</entry><entry>
+<para>Linha da antena a remover </para>
+</entry>
+                            </row>
+                            <row>
+<entry>coluna</entry><entry>
+<para>Coluna da antena a remover </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_antena_8c_source_1l00069">69</link> of file <link linkend="_antena_8c_source">antena.c</link>.</para>
+</section>
+</section>
+</section>

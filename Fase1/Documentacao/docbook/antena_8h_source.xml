@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_antena_8h_source" xml:lang="en-US">
+<title>antena.h</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_antena_8h_source_1l00001"/>00001 
+<anchor xml:id="_antena_8h_source_1l00011"/>00011 
+<anchor xml:id="_antena_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#ifndef&#32;ANTENA_H</emphasis>
+<anchor xml:id="_antena_8h_source_1l00013"/>00013 <emphasis role="preprocessor">#define&#32;ANTENA_H</emphasis>
+<anchor xml:id="_antena_8h_source_1l00014"/>00014 
+<anchor xml:id="_antena_8h_source_1l00015"/>00015 
+<anchor xml:id="_antena_8h_source_1l00020"/><link linkend="_struct_antena">00020</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_antena">Antena</link>&#32;{
+<anchor xml:id="_antena_8h_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;freq;
+<anchor xml:id="_antena_8h_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;linha,&#32;coluna;
+<anchor xml:id="_antena_8h_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_antena">Antena</link>&#32;*next;
+<anchor xml:id="_antena_8h_source_1l00024"/><link linkend="_antena_8h_1a843ab8b81393e8ebb3eb6b76e349acc2">00024</link> }&#32;<link linkend="_struct_antena">Antena</link>;
+<anchor xml:id="_antena_8h_source_1l00025"/>00025 
+<anchor xml:id="_antena_8h_source_1l00026"/>00026 
+<anchor xml:id="_antena_8h_source_1l00035"/>00035 <link linkend="_struct_antena">Antena</link>&#32;*<link linkend="_antena_8h_1a00a386a23b9f361d1f4c1cb0e735ca5d">criarAntena</link>(<emphasis role="keywordtype">char</emphasis>&#32;freq,&#32;<emphasis role="keywordtype">int</emphasis>&#32;linha,&#32;<emphasis role="keywordtype">int</emphasis>&#32;coluna);
+<anchor xml:id="_antena_8h_source_1l00036"/>00036 
+<anchor xml:id="_antena_8h_source_1l00037"/>00037 
+<anchor xml:id="_antena_8h_source_1l00046"/>00046 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_antena_8h_1acc0269270f879978a2b329a200244697">inserirAntena</link>(<link linkend="_struct_antena">Antena</link>&#32;**aux,&#32;<emphasis role="keywordtype">char</emphasis>&#32;freq,&#32;<emphasis role="keywordtype">int</emphasis>&#32;linha,&#32;<emphasis role="keywordtype">int</emphasis>&#32;coluna);
+<anchor xml:id="_antena_8h_source_1l00047"/>00047 
+<anchor xml:id="_antena_8h_source_1l00048"/>00048 
+<anchor xml:id="_antena_8h_source_1l00056"/>00056 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_antena_8h_1ae669c21caa03887ddee7c957a10fbf40">removerAntena</link>(<link linkend="_struct_antena">Antena</link>&#32;**aux,&#32;<emphasis role="keywordtype">int</emphasis>&#32;linha,&#32;<emphasis role="keywordtype">int</emphasis>&#32;coluna);
+<anchor xml:id="_antena_8h_source_1l00057"/>00057 
+<anchor xml:id="_antena_8h_source_1l00058"/>00058 
+<anchor xml:id="_antena_8h_source_1l00064"/><link linkend="_antena_8h_1a2a18909c27210e17ff28c6b4c8aa29a7">00064</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_antena_8h_1a2a18909c27210e17ff28c6b4c8aa29a7">listarAntenas</link>(<link linkend="_struct_antena">Antena</link>&#32;*aux);
+<anchor xml:id="_antena_8h_source_1l00065"/>00065 
+<anchor xml:id="_antena_8h_source_1l00066"/>00066 
+<anchor xml:id="_antena_8h_source_1l00072"/>00072 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_antena_8h_1a66ea723ccc8f6e107b0c215c4b2dd28f">libertarAntenas</link>(<link linkend="_struct_antena">Antena</link>&#32;*aux);
+<anchor xml:id="_antena_8h_source_1l00073"/>00073 
+<anchor xml:id="_antena_8h_source_1l00074"/>00074 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

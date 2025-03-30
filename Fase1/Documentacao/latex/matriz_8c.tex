@@ -1,0 +1,157 @@
+\doxysection{matriz.\+c File Reference}
+\hypertarget{matriz_8c}{}\label{matriz_8c}\index{matriz.c@{matriz.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$locale.\+h$>$}\newline
+{\ttfamily \#include "{}matriz.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{matriz_8c_a14d59b78779d5b1b5ab79aac7c3eb43a}{inserir\+Nefasto}} (\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}aux, int linha, int coluna)
+\begin{DoxyCompactList}\small\item\em Insere uma posição nefasta na lista ligada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matriz_8c_aba3864945dc2745df349ff8d16243f54}{exibir\+Matriz}} (\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}lista\+Antenas, int linhas, int colunas)
+\begin{DoxyCompactList}\small\item\em Exibe a matriz no terminal, com as antenas e os efeitos nefastos causados por pares de antenas com a mesma frequência. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matriz_8c_a5ea6087f0b529841e75090f478056e67}{gerar\+Efeitos\+Nefastos}} (\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}lista\+Antenas, char matriz\mbox{[}$\,$\mbox{]}\mbox{[}100\mbox{]}, int linhas, int colunas)
+\begin{DoxyCompactList}\small\item\em Gera efeitos nefastos causados por pares de antenas com a mesma frequência. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matriz_8c_ae03a71ace65214ff61d91e0338498fc2}{carregar\+Matriz\+Do\+Ficheiro}} (const char \texorpdfstring{$\ast$}{*}nome\+Ficheiro, \mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}aux, int \texorpdfstring{$\ast$}{*}linhas, int \texorpdfstring{$\ast$}{*}colunas)
+\begin{DoxyCompactList}\small\item\em Carrega uma matriz de um ficheiro, criando a lista de antenas a partir dos dados encontrados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matriz_8c_a37b39a41a7b261b151581be51bc1dd2b}{listar\+Nefastos}} (\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}aux)
+\begin{DoxyCompactList}\small\item\em Lista todas as posições afetadas por efeitos nefastos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Daniel Vilaça (\href{mailto:a16939@alunos.ipca.pt}{\texttt{ a16939@alunos.\+ipca.\+pt}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/03-\/30
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{matriz_8c_source}{matriz.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{matriz_8c_ae03a71ace65214ff61d91e0338498fc2}\index{matriz.c@{matriz.c}!carregarMatrizDoFicheiro@{carregarMatrizDoFicheiro}}
+\index{carregarMatrizDoFicheiro@{carregarMatrizDoFicheiro}!matriz.c@{matriz.c}}
+\doxysubsubsection{\texorpdfstring{carregarMatrizDoFicheiro()}{carregarMatrizDoFicheiro()}}
+{\footnotesize\ttfamily \label{matriz_8c_ae03a71ace65214ff61d91e0338498fc2} 
+void carregar\+Matriz\+Do\+Ficheiro (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{nome\+Ficheiro}{, }\item[{\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{aux}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{linhas}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{colunas}{}\end{DoxyParamCaption})}
+
+
+
+Carrega uma matriz de um ficheiro, criando a lista de antenas a partir dos dados encontrados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+Ficheiro} & Path do ficheiro a ser carregado \\
+\hline
+{\em aux} & Apontador para a lista onde as antenas serão armazenadas \\
+\hline
+{\em linhas} & Apontador para armazenar o número de linhas da matriz carregada \\
+\hline
+{\em colunas} & Apontador para armazenar o número de colunas da matriz carregada \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{matriz_8c_source_l00130}{130}} of file \mbox{\hyperlink{matriz_8c_source}{matriz.\+c}}.
+
+\Hypertarget{matriz_8c_aba3864945dc2745df349ff8d16243f54}\index{matriz.c@{matriz.c}!exibirMatriz@{exibirMatriz}}
+\index{exibirMatriz@{exibirMatriz}!matriz.c@{matriz.c}}
+\doxysubsubsection{\texorpdfstring{exibirMatriz()}{exibirMatriz()}}
+{\footnotesize\ttfamily \label{matriz_8c_aba3864945dc2745df349ff8d16243f54} 
+void exibir\+Matriz (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}}]{lista\+Antenas}{, }\item[{int}]{linhas}{, }\item[{int}]{colunas}{}\end{DoxyParamCaption})}
+
+
+
+Exibe a matriz no terminal, com as antenas e os efeitos nefastos causados por pares de antenas com a mesma frequência. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\+Antenas} & Lista de antenas a serem exibidas \\
+\hline
+{\em linhas} & Número de linhas da matriz \\
+\hline
+{\em colunas} & Número de colunas da matriz \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{matriz_8c_source_l00045}{45}} of file \mbox{\hyperlink{matriz_8c_source}{matriz.\+c}}.
+
+\Hypertarget{matriz_8c_a5ea6087f0b529841e75090f478056e67}\index{matriz.c@{matriz.c}!gerarEfeitosNefastos@{gerarEfeitosNefastos}}
+\index{gerarEfeitosNefastos@{gerarEfeitosNefastos}!matriz.c@{matriz.c}}
+\doxysubsubsection{\texorpdfstring{gerarEfeitosNefastos()}{gerarEfeitosNefastos()}}
+{\footnotesize\ttfamily \label{matriz_8c_a5ea6087f0b529841e75090f478056e67} 
+void gerar\+Efeitos\+Nefastos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}}]{lista\+Antenas}{, }\item[{char}]{matriz}{\mbox{[}$\,$\mbox{]}\mbox{[}100\mbox{]}, }\item[{int}]{linhas}{, }\item[{int}]{colunas}{}\end{DoxyParamCaption})}
+
+
+
+Gera efeitos nefastos causados por pares de antenas com a mesma frequência. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\+Antenas} & Apontador Lista de antenas \\
+\hline
+{\em matriz} & Matriz onde serão marcados os efeitos ("{}\#"{}) \\
+\hline
+{\em linhas} & Número de linhas da matriz \\
+\hline
+{\em colunas} & Número de colunas da matriz \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{matriz_8c_source_l00094}{94}} of file \mbox{\hyperlink{matriz_8c_source}{matriz.\+c}}.
+
+\Hypertarget{matriz_8c_a14d59b78779d5b1b5ab79aac7c3eb43a}\index{matriz.c@{matriz.c}!inserirNefasto@{inserirNefasto}}
+\index{inserirNefasto@{inserirNefasto}!matriz.c@{matriz.c}}
+\doxysubsubsection{\texorpdfstring{inserirNefasto()}{inserirNefasto()}}
+{\footnotesize\ttfamily \label{matriz_8c_a14d59b78779d5b1b5ab79aac7c3eb43a} 
+void inserir\+Nefasto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{aux}{, }\item[{int}]{linha}{, }\item[{int}]{coluna}{}\end{DoxyParamCaption})}
+
+
+
+Insere uma posição nefasta na lista ligada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aux} & Apontador para o apontador da lista de efeitos nefastos \\
+\hline
+{\em linha} & Linha da célula afetada \\
+\hline
+{\em coluna} & Coluna da célula afetada \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{matriz_8c_source_l00026}{26}} of file \mbox{\hyperlink{matriz_8c_source}{matriz.\+c}}.
+
+\Hypertarget{matriz_8c_a37b39a41a7b261b151581be51bc1dd2b}\index{matriz.c@{matriz.c}!listarNefastos@{listarNefastos}}
+\index{listarNefastos@{listarNefastos}!matriz.c@{matriz.c}}
+\doxysubsubsection{\texorpdfstring{listarNefastos()}{listarNefastos()}}
+{\footnotesize\ttfamily \label{matriz_8c_a37b39a41a7b261b151581be51bc1dd2b} 
+void listar\+Nefastos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}}]{aux}{}\end{DoxyParamCaption})}
+
+
+
+Lista todas as posições afetadas por efeitos nefastos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aux} & Lista ligada de posições nefastas \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{matriz_8c_source_l00159}{159}} of file \mbox{\hyperlink{matriz_8c_source}{matriz.\+c}}.
+

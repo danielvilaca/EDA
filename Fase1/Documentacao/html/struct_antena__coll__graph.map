@@ -1,0 +1,4 @@
+<map id="Antena" name="Antena">
+<area shape="rect" id="Node000001" title="Estrutura que representa uma antena." alt="" coords="5,5,68,32"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="85,12,94,19,85,25,68,26,68,21,84,20,89,19,82,17"/>
+</map>

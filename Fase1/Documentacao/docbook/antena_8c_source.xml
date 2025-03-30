@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_antena_8c_source" xml:lang="en-US">
+<title>antena.c</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_antena_8c_source_1l00001"/>00001 
+<anchor xml:id="_antena_8c_source_1l00011"/>00011 
+<anchor xml:id="_antena_8c_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+<anchor xml:id="_antena_8c_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&lt;stdlib.h&gt;</emphasis>
+<anchor xml:id="_antena_8c_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&lt;locale.h&gt;</emphasis>
+<anchor xml:id="_antena_8c_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_antena_8h">antena.h</link>&quot;</emphasis>
+<anchor xml:id="_antena_8c_source_1l00016"/>00016 
+<anchor xml:id="_antena_8c_source_1l00017"/>00017 
+<anchor xml:id="_antena_8c_source_1l00026"/><link linkend="_antena_8c_1a00a386a23b9f361d1f4c1cb0e735ca5d">00026</link> <link linkend="_struct_antena">Antena</link>&#32;*<link linkend="_antena_8c_1a00a386a23b9f361d1f4c1cb0e735ca5d">criarAntena</link>(<emphasis role="keywordtype">char</emphasis>&#32;freq,&#32;<emphasis role="keywordtype">int</emphasis>&#32;linha,&#32;<emphasis role="keywordtype">int</emphasis>&#32;coluna)&#32;{
+<anchor xml:id="_antena_8c_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<link linkend="_struct_antena">Antena</link>&#32;*nova&#32;=&#32;(<link linkend="_struct_antena">Antena</link>&#32;*)malloc(<emphasis role="keyword">sizeof</emphasis>(<link linkend="_struct_antena">Antena</link>));
+<anchor xml:id="_antena_8c_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!nova)&#32;{
+<anchor xml:id="_antena_8c_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;perror(<emphasis role="stringliteral">&quot;Erro&#32;ao&#32;alocar&#32;memória&quot;</emphasis>);
+<anchor xml:id="_antena_8c_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;exit(1);
+<anchor xml:id="_antena_8c_source_1l00031"/>00031 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_antena_8c_source_1l00032"/>00032 &#32;&#32;&#32;&#32;nova-&gt;freq&#32;=&#32;freq;
+<anchor xml:id="_antena_8c_source_1l00033"/>00033 &#32;&#32;&#32;&#32;nova-&gt;linha&#32;=&#32;linha;
+<anchor xml:id="_antena_8c_source_1l00034"/>00034 &#32;&#32;&#32;&#32;nova-&gt;coluna&#32;=&#32;coluna;
+<anchor xml:id="_antena_8c_source_1l00035"/>00035 &#32;&#32;&#32;&#32;nova-&gt;next&#32;=&#32;NULL;
+<anchor xml:id="_antena_8c_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;nova;
+<anchor xml:id="_antena_8c_source_1l00037"/>00037 }
+<anchor xml:id="_antena_8c_source_1l00038"/>00038 
+<anchor xml:id="_antena_8c_source_1l00039"/>00039 
+<anchor xml:id="_antena_8c_source_1l00048"/><link linkend="_antena_8c_1acc0269270f879978a2b329a200244697">00048</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_antena_8c_1acc0269270f879978a2b329a200244697">inserirAntena</link>(<link linkend="_struct_antena">Antena</link>&#32;**aux,&#32;<emphasis role="keywordtype">char</emphasis>&#32;freq,&#32;<emphasis role="keywordtype">int</emphasis>&#32;linha,&#32;<emphasis role="keywordtype">int</emphasis>&#32;coluna)&#32;{
+<anchor xml:id="_antena_8c_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<link linkend="_struct_antena">Antena</link>&#32;*nova&#32;=&#32;<link linkend="_antena_8c_1a00a386a23b9f361d1f4c1cb0e735ca5d">criarAntena</link>(freq,&#32;linha,&#32;coluna);
+<anchor xml:id="_antena_8c_source_1l00050"/>00050 &#32;&#32;&#32;&#32;nova-&gt;next&#32;=&#32;NULL;
+<anchor xml:id="_antena_8c_source_1l00051"/>00051 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(*aux&#32;==&#32;NULL)&#32;{
+<anchor xml:id="_antena_8c_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*aux&#32;=&#32;nova;
+<anchor xml:id="_antena_8c_source_1l00053"/>00053 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_antena_8c_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_struct_antena">Antena</link>&#32;*atual&#32;=&#32;*aux;
+<anchor xml:id="_antena_8c_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(atual-&gt;next&#32;!=&#32;NULL)
+<anchor xml:id="_antena_8c_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;atual&#32;=&#32;atual-&gt;next;
+<anchor xml:id="_antena_8c_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;atual-&gt;next&#32;=&#32;nova;
+<anchor xml:id="_antena_8c_source_1l00058"/>00058 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_antena_8c_source_1l00059"/>00059 }
+<anchor xml:id="_antena_8c_source_1l00060"/>00060 
+<anchor xml:id="_antena_8c_source_1l00061"/>00061 
+<anchor xml:id="_antena_8c_source_1l00069"/><link linkend="_antena_8c_1ae669c21caa03887ddee7c957a10fbf40">00069</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_antena_8c_1ae669c21caa03887ddee7c957a10fbf40">removerAntena</link>(<link linkend="_struct_antena">Antena</link>&#32;**aux,&#32;<emphasis role="keywordtype">int</emphasis>&#32;linha,&#32;<emphasis role="keywordtype">int</emphasis>&#32;coluna)&#32;{
+<anchor xml:id="_antena_8c_source_1l00070"/>00070 &#32;&#32;&#32;&#32;<link linkend="_struct_antena">Antena</link>&#32;*atual&#32;=&#32;*aux,&#32;*anterior&#32;=&#32;NULL;
+<anchor xml:id="_antena_8c_source_1l00071"/>00071 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(atual)&#32;{
+<anchor xml:id="_antena_8c_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(atual-&gt;linha&#32;==&#32;linha&#32;&amp;&amp;&#32;atual-&gt;coluna&#32;==&#32;coluna)&#32;{
+<anchor xml:id="_antena_8c_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(anterior)&#32;anterior-&gt;next&#32;=&#32;atual-&gt;next;
+<anchor xml:id="_antena_8c_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;*aux&#32;=&#32;atual-&gt;next;
+<anchor xml:id="_antena_8c_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;free(atual);
+<anchor xml:id="_antena_8c_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_antena_8c_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_antena_8c_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;anterior&#32;=&#32;atual;
+<anchor xml:id="_antena_8c_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;atual&#32;=&#32;atual-&gt;next;
+<anchor xml:id="_antena_8c_source_1l00080"/>00080 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_antena_8c_source_1l00081"/>00081 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Antena&#32;em&#32;(%d,&#32;%d)&#32;não&#32;encontrada.\n&quot;</emphasis>,&#32;linha&#32;+&#32;1,&#32;coluna&#32;+&#32;1);
+<anchor xml:id="_antena_8c_source_1l00082"/>00082 }
+<anchor xml:id="_antena_8c_source_1l00083"/>00083 
+<anchor xml:id="_antena_8c_source_1l00084"/>00084 
+<anchor xml:id="_antena_8c_source_1l00090"/><link linkend="_antena_8c_1a95eef017973172f510d032bc882e2053">00090</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_antena_8c_1a95eef017973172f510d032bc882e2053">auxrAntenas</link>(<link linkend="_struct_antena">Antena</link>&#32;*aux)&#32;{
+<anchor xml:id="_antena_8c_source_1l00091"/>00091 &#32;&#32;&#32;&#32;setlocale(LC_ALL,&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>);
+<anchor xml:id="_antena_8c_source_1l00092"/>00092 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\n%-12s&#32;%-10s&#32;%-10s\n&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Frequencia&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Linha&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Coluna&quot;</emphasis>);
+<anchor xml:id="_antena_8c_source_1l00093"/>00093 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;%-12s&#32;%-10s&#32;%-10s\n&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;-----------&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;-----&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;------&quot;</emphasis>);
+<anchor xml:id="_antena_8c_source_1l00094"/>00094 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(aux)&#32;{
+<anchor xml:id="_antena_8c_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;%-12c&#32;%-10d&#32;%-10d\n&quot;</emphasis>,&#32;aux-&gt;freq,&#32;aux-&gt;linha&#32;+&#32;1,&#32;aux-&gt;coluna&#32;+&#32;1);
+<anchor xml:id="_antena_8c_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;aux&#32;=&#32;aux-&gt;next;
+<anchor xml:id="_antena_8c_source_1l00097"/>00097 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_antena_8c_source_1l00098"/>00098 }
+<anchor xml:id="_antena_8c_source_1l00099"/>00099 
+<anchor xml:id="_antena_8c_source_1l00100"/>00100 
+<anchor xml:id="_antena_8c_source_1l00106"/><link linkend="_antena_8c_1a66ea723ccc8f6e107b0c215c4b2dd28f">00106</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_antena_8c_1a66ea723ccc8f6e107b0c215c4b2dd28f">libertarAntenas</link>(<link linkend="_struct_antena">Antena</link>&#32;*aux)&#32;{
+<anchor xml:id="_antena_8c_source_1l00107"/>00107 &#32;&#32;&#32;&#32;<link linkend="_struct_antena">Antena</link>&#32;*temp;
+<anchor xml:id="_antena_8c_source_1l00108"/>00108 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(aux)&#32;{
+<anchor xml:id="_antena_8c_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;temp&#32;=&#32;aux;
+<anchor xml:id="_antena_8c_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;aux&#32;=&#32;aux-&gt;next;
+<anchor xml:id="_antena_8c_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;free(temp);
+<anchor xml:id="_antena_8c_source_1l00112"/>00112 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_antena_8c_source_1l00113"/>00113 }
+</programlisting></section>

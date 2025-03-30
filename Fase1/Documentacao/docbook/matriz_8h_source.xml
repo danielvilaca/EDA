@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_matriz_8h_source" xml:lang="en-US">
+<title>matriz.h</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_matriz_8h_source_1l00001"/>00001 
+<anchor xml:id="_matriz_8h_source_1l00011"/>00011 
+<anchor xml:id="_matriz_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#ifndef&#32;MATRIZ_H</emphasis>
+<anchor xml:id="_matriz_8h_source_1l00013"/>00013 <emphasis role="preprocessor">#define&#32;MATRIZ_H</emphasis>
+<anchor xml:id="_matriz_8h_source_1l00014"/>00014 
+<anchor xml:id="_matriz_8h_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_antena_8h">antena.h</link>&quot;</emphasis>
+<anchor xml:id="_matriz_8h_source_1l00016"/>00016 
+<anchor xml:id="_matriz_8h_source_1l00017"/>00017 
+<anchor xml:id="_matriz_8h_source_1l00022"/><link linkend="_struct_node">00022</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_node">Node</link>&#32;{
+<anchor xml:id="_matriz_8h_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;linha,&#32;coluna;
+<anchor xml:id="_matriz_8h_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_node">Node</link>&#32;*next;
+<anchor xml:id="_matriz_8h_source_1l00025"/><link linkend="_matriz_8h_1a3b09f37e675bcd48a01bf22155996872">00025</link> }&#32;<link linkend="_struct_node">Node</link>;
+<anchor xml:id="_matriz_8h_source_1l00026"/>00026 
+<anchor xml:id="_matriz_8h_source_1l00027"/>00027 
+<anchor xml:id="_matriz_8h_source_1l00035"/>00035 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_matriz_8h_1aba3864945dc2745df349ff8d16243f54">exibirMatriz</link>(<link linkend="_struct_antena">Antena</link>&#32;*listaAntenas,&#32;<emphasis role="keywordtype">int</emphasis>&#32;linhas,&#32;<emphasis role="keywordtype">int</emphasis>&#32;colunas);
+<anchor xml:id="_matriz_8h_source_1l00036"/>00036 
+<anchor xml:id="_matriz_8h_source_1l00045"/>00045 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_matriz_8h_1a5ea6087f0b529841e75090f478056e67">gerarEfeitosNefastos</link>(<link linkend="_struct_antena">Antena</link>&#32;*listaAntenas,&#32;<emphasis role="keywordtype">char</emphasis>&#32;matriz[][100],&#32;<emphasis role="keywordtype">int</emphasis>&#32;linhas,&#32;<emphasis role="keywordtype">int</emphasis>&#32;colunas);
+<anchor xml:id="_matriz_8h_source_1l00046"/>00046 
+<anchor xml:id="_matriz_8h_source_1l00055"/>00055 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_matriz_8h_1a9d66c32dc5785c33196976b9b9c8e43e">carregarMatrizDoFicheiro</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*nomeFicheiro,&#32;<link linkend="_struct_antena">Antena</link>&#32;**listaAntenas,&#32;<emphasis role="keywordtype">int</emphasis>&#32;*linhas,&#32;<emphasis role="keywordtype">int</emphasis>&#32;*colunas);
+<anchor xml:id="_matriz_8h_source_1l00056"/>00056 
+<anchor xml:id="_matriz_8h_source_1l00062"/>00062 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_matriz_8h_1a78a6ce8e44d392a2c309e13677d40dd1">listarNefastos</link>(<link linkend="_struct_node">Node</link>&#32;*lista);
+<anchor xml:id="_matriz_8h_source_1l00063"/>00063 
+<anchor xml:id="_matriz_8h_source_1l00064"/>00064 
+<anchor xml:id="_matriz_8h_source_1l00065"/>00065 
+<anchor xml:id="_matriz_8h_source_1l00066"/>00066 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

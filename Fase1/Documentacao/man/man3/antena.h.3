@@ -1,0 +1,213 @@
+.TH "antena.h" 3 "EDA_16939_Fase1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+antena.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBAntena\fP"
+.br
+.RI "Estrutura que representa uma antena\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct Antena \fBAntena\fP"
+.br
+.RI "Estrutura que representa uma antena\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAntena\fP * \fBcriarAntena\fP (char freq, int linha, int coluna)"
+.br
+.RI "Função que cria uma nova antena\&. "
+.ti -1c
+.RI "void \fBinserirAntena\fP (\fBAntena\fP **aux, char freq, int linha, int coluna)"
+.br
+.RI "Função que insere uma nova antena na lista\&. "
+.ti -1c
+.RI "void \fBremoverAntena\fP (\fBAntena\fP **aux, int linha, int coluna)"
+.br
+.RI "Função que remove uma antena localizada numa posição especifica da matriz\&. "
+.ti -1c
+.RI "void \fBlistarAntenas\fP (\fBAntena\fP *aux)"
+.br
+.RI "Lista todas as antenas presentes na lista ligada\&. "
+.ti -1c
+.RI "void \fBlibertarAntenas\fP (\fBAntena\fP *aux)"
+.br
+.RI "Liberta a memória ocupada por todas as antenas da lista\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+Daniel Vilaça (a16939@alunos.ipca.pt) 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+2025-03-30
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+Copyright (c) 2025 
+.RE
+.PP
+
+.PP
+Definition in file \fBantena\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBAntena\fP * criarAntena (char freq, int linha, int coluna)"
+
+.PP
+Função que cria uma nova antena\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfreq\fP Char que representa a frequência/tipo de antena 
+.br
+\fIlinha\fP Linha da matriz onde a antena será colocada 
+.br
+\fIcoluna\fP Coluna da matriz onde a antena será colocada 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Antena* Apontador para a nova antena criada
+.RE
+.PP
+Função que cria uma nova antena\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIfreq\fP Char que representa a frequência/tipo de antena 
+.br
+\fIlinha\fP Linha da matriz onde a antena será colocada 
+.br
+\fIcoluna\fP Coluna da matriz onde a antena será colocada 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Antena* Apontador para a nova antena criada 
+.RE
+.PP
+
+.PP
+Definition at line \fB26\fP of file \fBantena\&.c\fP\&.
+.SS "void inserirAntena (\fBAntena\fP ** aux, char freq, int linha, int coluna)"
+
+.PP
+Função que insere uma nova antena na lista\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaux\fP Apontador para o apontador da lista de antenas 
+.br
+\fIfreq\fP Char que representa a frequência/tipo da nova antena 
+.br
+\fIlinha\fP Linha onde será inserida 
+.br
+\fIcoluna\fP Coluna onde será inserida
+.RE
+.PP
+Função que insere uma nova antena na lista\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIaux\fP Apontador para o apontador da lista de antenas 
+.br
+\fIfreq\fP Char que representa a frequência/tipo de antena 
+.br
+\fIlinha\fP Linha onde será inserida 
+.br
+\fIcoluna\fP Coluna onde será inserida 
+.RE
+.PP
+
+.PP
+Definition at line \fB48\fP of file \fBantena\&.c\fP\&.
+.SS "void libertarAntenas (\fBAntena\fP * aux)"
+
+.PP
+Liberta a memória ocupada por todas as antenas da lista\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaux\fP Apontador para a lista de antenas\&.
+.RE
+.PP
+Liberta a memória ocupada por todas as antenas da lista\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIaux\fP Apontador para a lista de antenas 
+.RE
+.PP
+
+.PP
+Definition at line \fB106\fP of file \fBantena\&.c\fP\&.
+.SS "void listarAntenas (\fBAntena\fP * aux)"
+
+.PP
+Lista todas as antenas presentes na lista ligada\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaux\fP Apontador para a lista de antenas 
+.RE
+.PP
+
+.SS "void removerAntena (\fBAntena\fP ** aux, int linha, int coluna)"
+
+.PP
+Função que remove uma antena localizada numa posição especifica da matriz\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlista\fP Apontador para o apontador da lista de antenas 
+.br
+\fIlinha\fP Linha da antena a remover 
+.br
+\fIcoluna\fP Coluna da antena a remover
+.RE
+.PP
+Função que remove uma antena localizada numa posição especifica da matriz\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIaux\fP Apontador para o apontador da lista de antenas 
+.br
+\fIlinha\fP Linha da antena a remover 
+.br
+\fIcoluna\fP Coluna da antena a remover 
+.RE
+.PP
+
+.PP
+Definition at line \fB69\fP of file \fBantena\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EDA_16939_Fase1 from the source code\&.

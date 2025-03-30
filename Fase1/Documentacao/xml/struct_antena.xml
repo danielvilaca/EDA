@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="struct_antena" kind="struct" language="C++" prot="public">
+    <compoundname>Antena</compoundname>
+    <includes refid="antena_8h" local="no">antena.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_antena_1acbb0ceb3114405ec0fd07f67b79bd3e5" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Antena::freq</definition>
+        <argsstring></argsstring>
+        <name>freq</name>
+        <qualifiedname>Antena::freq</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="antena.h" line="21" column="10" bodyfile="antena.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_antena_1a2913fa9623f812bffff810528877ee24" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Antena::linha</definition>
+        <argsstring></argsstring>
+        <name>linha</name>
+        <qualifiedname>Antena::linha</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="antena.h" line="22" column="9" bodyfile="antena.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_antena_1ad28f77663b945c81f26e84c1b62cb63f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Antena::coluna</definition>
+        <argsstring></argsstring>
+        <name>coluna</name>
+        <qualifiedname>Antena::coluna</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="antena.h" line="22" column="15" bodyfile="antena.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_antena_1ae518c9afee14b875ac030364762e23ba" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_antena" kindref="compound">Antena</ref> *</type>
+        <definition>struct Antena* Antena::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <qualifiedname>Antena::next</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="antena.h" line="23" column="17" bodyfile="antena.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Estrutura que representa uma antena. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Antena</label>
+        <link refid="struct_antena"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="antena.h" line="20" column="1" bodyfile="antena.h" bodystart="20" bodyend="24"/>
+    <listofallmembers>
+      <member refid="struct_antena_1ad28f77663b945c81f26e84c1b62cb63f" prot="public" virt="non-virtual"><scope>Antena</scope><name>coluna</name></member>
+      <member refid="struct_antena_1acbb0ceb3114405ec0fd07f67b79bd3e5" prot="public" virt="non-virtual"><scope>Antena</scope><name>freq</name></member>
+      <member refid="struct_antena_1a2913fa9623f812bffff810528877ee24" prot="public" virt="non-virtual"><scope>Antena</scope><name>linha</name></member>
+      <member refid="struct_antena_1ae518c9afee14b875ac030364762e23ba" prot="public" virt="non-virtual"><scope>Antena</scope><name>next</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_matriz_8h" xml:lang="en-US">
+<title>matriz.h File Reference</title>
+<indexterm><primary>matriz.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;antena.h&quot;<?linebreak?></programlisting>Include dependency graph for matriz.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="matriz_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="matriz_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_node">Node</link></para>
+
+<para>Estrutura de um nó da lista ligada de efeitos nefastos. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_matriz_8h_1a3b09f37e675bcd48a01bf22155996872"/>typedef struct Node <emphasis role="strong">Node</emphasis></para>
+
+<para>Estrutura de um nó da lista ligada de efeitos nefastos. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_matriz_8h_1aba3864945dc2745df349ff8d16243f54">exibirMatriz</link> (<link linkend="_struct_antena">Antena</link> *listaAntenas, int linhas, int colunas)</para>
+
+<para>Exibe a matriz no terminal, com as antenas e os efeitos nefastos causados por pares de antenas com a mesma frequência. </para>
+</listitem>
+            <listitem><para>void <link linkend="_matriz_8h_1a5ea6087f0b529841e75090f478056e67">gerarEfeitosNefastos</link> (<link linkend="_struct_antena">Antena</link> *listaAntenas, char matriz[][100], int linhas, int colunas)</para>
+
+<para>Gera efeitos nefastos causados por pares de antenas com a mesma frequência. </para>
+</listitem>
+            <listitem><para>void <link linkend="_matriz_8h_1a9d66c32dc5785c33196976b9b9c8e43e">carregarMatrizDoFicheiro</link> (const char *nomeFicheiro, <link linkend="_struct_antena">Antena</link> **listaAntenas, int *linhas, int *colunas)</para>
+
+<para>Carrega uma matriz de um ficheiro, criando a lista de antenas a partir dos dados encontrados. </para>
+</listitem>
+            <listitem><para>void <link linkend="_matriz_8h_1a78a6ce8e44d392a2c309e13677d40dd1">listarNefastos</link> (<link linkend="_struct_node">Node</link> *lista)</para>
+
+<para>Lista todas as posições afetadas por efeitos nefastos. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><formalpara><title>Author</title>
+
+<para>Daniel Vilaça (<link xlink:href="mailto:a16939@alunos.ipca.pt">a16939@alunos.ipca.pt</link>) </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>2025-03-30</para>
+</formalpara>
+<formalpara><title>Copyright</title>
+
+<para>Copyright (c) 2025 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_matriz_8h_source">matriz.h</link>.</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_matriz_8h_1a9d66c32dc5785c33196976b9b9c8e43e"/><section>
+    <title>carregarMatrizDoFicheiro()</title>
+<indexterm><primary>carregarMatrizDoFicheiro</primary><secondary>matriz.h</secondary></indexterm>
+<indexterm><primary>matriz.h</primary><secondary>carregarMatrizDoFicheiro</secondary></indexterm>
+<para><computeroutput>void carregarMatrizDoFicheiro (const char * nomeFicheiro, <link linkend="_struct_antena">Antena</link> ** aux, int * linhas, int * colunas)</computeroutput></para><para>
+
+<para>Carrega uma matriz de um ficheiro, criando a lista de antenas a partir dos dados encontrados. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>nomeFicheiro</entry><entry>
+<para>Path do ficheiro a ser carregado </para>
+</entry>
+                            </row>
+                            <row>
+<entry>listaAntenas</entry><entry>
+<para>Apontador para a lista de antenas </para>
+</entry>
+                            </row>
+                            <row>
+<entry>linhas</entry><entry>
+<para>Número de linhas da matriz </para>
+</entry>
+                            </row>
+                            <row>
+<entry>colunas</entry><entry>
+<para>Número de colunas da matriz</para>
+</entry>
+                            </row>
+                            <row>
+<entry>nomeFicheiro</entry><entry>
+<para>Path do ficheiro a ser carregado </para>
+</entry>
+                            </row>
+                            <row>
+<entry>aux</entry><entry>
+<para>Apontador para a lista onde as antenas serão armazenadas </para>
+</entry>
+                            </row>
+                            <row>
+<entry>linhas</entry><entry>
+<para>Apontador para armazenar o número de linhas da matriz carregada </para>
+</entry>
+                            </row>
+                            <row>
+<entry>colunas</entry><entry>
+<para>Apontador para armazenar o número de colunas da matriz carregada </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_matriz_8c_source_1l00130">130</link> of file <link linkend="_matriz_8c_source">matriz.c</link>.</para>
+</section>
+<anchor xml:id="_matriz_8h_1aba3864945dc2745df349ff8d16243f54"/><section>
+    <title>exibirMatriz()</title>
+<indexterm><primary>exibirMatriz</primary><secondary>matriz.h</secondary></indexterm>
+<indexterm><primary>matriz.h</primary><secondary>exibirMatriz</secondary></indexterm>
+<para><computeroutput>void exibirMatriz (<link linkend="_struct_antena">Antena</link> * listaAntenas, int linhas, int colunas)</computeroutput></para><para>
+
+<para>Exibe a matriz no terminal, com as antenas e os efeitos nefastos causados por pares de antenas com a mesma frequência. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>listaAntenas</entry><entry>
+<para>Lista de antenas a serem exibidas </para>
+</entry>
+                            </row>
+                            <row>
+<entry>linhas</entry><entry>
+<para>Número de linhas da matriz </para>
+</entry>
+                            </row>
+                            <row>
+<entry>colunas</entry><entry>
+<para>Número de colunas da matriz </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_matriz_8c_source_1l00045">45</link> of file <link linkend="_matriz_8c_source">matriz.c</link>.</para>
+</section>
+<anchor xml:id="_matriz_8h_1a5ea6087f0b529841e75090f478056e67"/><section>
+    <title>gerarEfeitosNefastos()</title>
+<indexterm><primary>gerarEfeitosNefastos</primary><secondary>matriz.h</secondary></indexterm>
+<indexterm><primary>matriz.h</primary><secondary>gerarEfeitosNefastos</secondary></indexterm>
+<para><computeroutput>void gerarEfeitosNefastos (<link linkend="_struct_antena">Antena</link> * listaAntenas, char matriz[][100], int linhas, int colunas)</computeroutput></para><para>
+
+<para>Gera efeitos nefastos causados por pares de antenas com a mesma frequência. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>listaAntenas</entry><entry>
+<para>Apontador Lista de antenas </para>
+</entry>
+                            </row>
+                            <row>
+<entry>matriz</entry><entry>
+<para>Matriz onde serão marcados os efeitos (&quot;#&quot;) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>linhas</entry><entry>
+<para>Número de linhas da matriz </para>
+</entry>
+                            </row>
+                            <row>
+<entry>colunas</entry><entry>
+<para>Número de colunas da matriz </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_matriz_8c_source_1l00094">94</link> of file <link linkend="_matriz_8c_source">matriz.c</link>.</para>
+</section>
+<anchor xml:id="_matriz_8h_1a78a6ce8e44d392a2c309e13677d40dd1"/><section>
+    <title>listarNefastos()</title>
+<indexterm><primary>listarNefastos</primary><secondary>matriz.h</secondary></indexterm>
+<indexterm><primary>matriz.h</primary><secondary>listarNefastos</secondary></indexterm>
+<para><computeroutput>void listarNefastos (<link linkend="_struct_node">Node</link> * aux)</computeroutput></para><para>
+
+<para>Lista todas as posições afetadas por efeitos nefastos. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>lista</entry><entry>
+<para>Apontador para a lista de efeitos nefastos</para>
+</entry>
+                            </row>
+                            <row>
+<entry>aux</entry><entry>
+<para>Lista ligada de posições nefastas </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_matriz_8c_source_1l00159">159</link> of file <link linkend="_matriz_8c_source">matriz.c</link>.</para>
+</section>
+</section>
+</section>

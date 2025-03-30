@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_antena" xml:lang="en-US">
+<title>Antena Struct Reference</title>
+<indexterm><primary>Antena</primary></indexterm>
+<para>
+
+<para>Estrutura que representa uma antena. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;antena.h&gt;</computeroutput>
+</para>
+Collaboration diagram for Antena:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="struct_antena__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>char <link linkend="_struct_antena_1acbb0ceb3114405ec0fd07f67b79bd3e5">freq</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_antena_1a2913fa9623f812bffff810528877ee24">linha</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_antena_1ad28f77663b945c81f26e84c1b62cb63f">coluna</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_antena">Antena</link> * <link linkend="_struct_antena_1ae518c9afee14b875ac030364762e23ba">next</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Estrutura que representa uma antena. </para>
+<para>
+Definition at line <link linkend="_antena_8h_source_1l00020">20</link> of file <link linkend="_antena_8h_source">antena.h</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_antena_1ad28f77663b945c81f26e84c1b62cb63f"/><section>
+    <title>coluna</title>
+<indexterm><primary>coluna</primary><secondary>Antena</secondary></indexterm>
+<indexterm><primary>Antena</primary><secondary>coluna</secondary></indexterm>
+<para><computeroutput>int Antena::coluna</computeroutput></para><para>
+Definition at line <link linkend="_antena_8h_source_1l00022">22</link> of file <link linkend="_antena_8h_source">antena.h</link>.</para>
+</section>
+<anchor xml:id="_struct_antena_1acbb0ceb3114405ec0fd07f67b79bd3e5"/><section>
+    <title>freq</title>
+<indexterm><primary>freq</primary><secondary>Antena</secondary></indexterm>
+<indexterm><primary>Antena</primary><secondary>freq</secondary></indexterm>
+<para><computeroutput>char Antena::freq</computeroutput></para><para>
+Definition at line <link linkend="_antena_8h_source_1l00021">21</link> of file <link linkend="_antena_8h_source">antena.h</link>.</para>
+</section>
+<anchor xml:id="_struct_antena_1a2913fa9623f812bffff810528877ee24"/><section>
+    <title>linha</title>
+<indexterm><primary>linha</primary><secondary>Antena</secondary></indexterm>
+<indexterm><primary>Antena</primary><secondary>linha</secondary></indexterm>
+<para><computeroutput>int Antena::linha</computeroutput></para><para>
+Definition at line <link linkend="_antena_8h_source_1l00022">22</link> of file <link linkend="_antena_8h_source">antena.h</link>.</para>
+</section>
+<anchor xml:id="_struct_antena_1ae518c9afee14b875ac030364762e23ba"/><section>
+    <title>next</title>
+<indexterm><primary>next</primary><secondary>Antena</secondary></indexterm>
+<indexterm><primary>Antena</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_struct_antena">Antena</link>* Antena::next</computeroutput></para><para>
+Definition at line <link linkend="_antena_8h_source_1l00023">23</link> of file <link linkend="_antena_8h_source">antena.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+<link linkend="_antena_8h">antena.h</link></section>
+</section>

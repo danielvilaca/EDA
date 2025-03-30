@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_node" xml:lang="en-US">
+<title>Node Struct Reference</title>
+<indexterm><primary>Node</primary></indexterm>
+<para>
+
+<para>Estrutura de um nó da lista ligada de efeitos nefastos. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;matriz.h&gt;</computeroutput>
+</para>
+Collaboration diagram for Node:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="struct_node__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_node_1aed29de4c5d116b3f4a9880896d0023d3">linha</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_node_1a42f897b88b42ed9fc526b5794fcf934f">coluna</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_node">Node</link> * <link linkend="_struct_node_1af67b110ca1a258b793bf69d306929b22">next</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Estrutura de um nó da lista ligada de efeitos nefastos. </para>
+<para>
+Definition at line <link linkend="_matriz_8h_source_1l00022">22</link> of file <link linkend="_matriz_8h_source">matriz.h</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_node_1a42f897b88b42ed9fc526b5794fcf934f"/><section>
+    <title>coluna</title>
+<indexterm><primary>coluna</primary><secondary>Node</secondary></indexterm>
+<indexterm><primary>Node</primary><secondary>coluna</secondary></indexterm>
+<para><computeroutput>int Node::coluna</computeroutput></para><para>
+Definition at line <link linkend="_matriz_8h_source_1l00023">23</link> of file <link linkend="_matriz_8h_source">matriz.h</link>.</para>
+</section>
+<anchor xml:id="_struct_node_1aed29de4c5d116b3f4a9880896d0023d3"/><section>
+    <title>linha</title>
+<indexterm><primary>linha</primary><secondary>Node</secondary></indexterm>
+<indexterm><primary>Node</primary><secondary>linha</secondary></indexterm>
+<para><computeroutput>int Node::linha</computeroutput></para><para>
+Definition at line <link linkend="_matriz_8h_source_1l00023">23</link> of file <link linkend="_matriz_8h_source">matriz.h</link>.</para>
+</section>
+<anchor xml:id="_struct_node_1af67b110ca1a258b793bf69d306929b22"/><section>
+    <title>next</title>
+<indexterm><primary>next</primary><secondary>Node</secondary></indexterm>
+<indexterm><primary>Node</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_struct_node">Node</link>* Node::next</computeroutput></para><para>
+Definition at line <link linkend="_matriz_8h_source_1l00024">24</link> of file <link linkend="_matriz_8h_source">matriz.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+<link linkend="_matriz_8h">matriz.h</link></section>
+</section>

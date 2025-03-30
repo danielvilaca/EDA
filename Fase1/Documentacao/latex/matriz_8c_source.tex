@@ -1,0 +1,128 @@
+\doxysection{matriz.\+c}
+\hypertarget{matriz_8c_source}{}\label{matriz_8c_source}\mbox{\hyperlink{matriz_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <locale.h>}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{matriz_8h}{matriz.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00026}\mbox{\hyperlink{matriz_8c_a14d59b78779d5b1b5ab79aac7c3eb43a}{00026}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{matriz_8c_a14d59b78779d5b1b5ab79aac7c3eb43a}{inserirNefasto}}(\mbox{\hyperlink{struct_node}{Node}}\ **aux,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna)\ \{}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{struct_node}{Node}}\ *n\ =\ *aux;\ n\ !=\ NULL;\ n\ =\ n-\/>\mbox{\hyperlink{struct_node_af67b110ca1a258b793bf69d306929b22}{next}})}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (n-\/>linha\ ==\ linha\ \&\&\ n-\/>coluna\ ==\ coluna)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{struct_node}{Node}}\ *novo\ =\ (\mbox{\hyperlink{struct_node}{Node}}\ *)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_node}{Node}}));}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00031}00031\ \ \ \ \ novo-\/>\mbox{\hyperlink{struct_node_aed29de4c5d116b3f4a9880896d0023d3}{linha}}\ =\ linha;}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00032}00032\ \ \ \ \ novo-\/>\mbox{\hyperlink{struct_node_a42f897b88b42ed9fc526b5794fcf934f}{coluna}}\ =\ coluna;}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00033}00033\ \ \ \ \ novo-\/>\mbox{\hyperlink{struct_node_af67b110ca1a258b793bf69d306929b22}{next}}\ =\ *aux;}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00034}00034\ \ \ \ \ *aux\ =\ novo;}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00045}\mbox{\hyperlink{matriz_8c_aba3864945dc2745df349ff8d16243f54}{00045}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{matriz_8c_aba3864945dc2745df349ff8d16243f54}{exibirMatriz}}(\mbox{\hyperlink{struct_antena}{Antena}}\ *listaAntenas,\ \textcolor{keywordtype}{int}\ linhas,\ \textcolor{keywordtype}{int}\ colunas)\ \{}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{char}\ matriz[100][100];\ \textcolor{comment}{//\ Máximo}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//\ Inicializar\ matriz\ com\ '.'}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ linhas;\ i++)}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ colunas;\ j++)}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ matriz[i][j]\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00053}00053\ \ \ \ \ \textcolor{comment}{//\ Antenas\ na\ matriz}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{struct_antena}{Antena}}\ *a\ =\ listaAntenas;\ a\ !=\ NULL;\ a\ =\ a-\/>\mbox{\hyperlink{struct_antena_ae518c9afee14b875ac030364762e23ba}{next}})}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ matriz[a-\/>linha][a-\/>coluna]\ =\ a-\/>freq;}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00057}00057\ \ \ \ \ \textcolor{comment}{//\ Gerar\ efeitos\ nefastos}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00058}00058\ \ \ \ \ \mbox{\hyperlink{matriz_8c_a5ea6087f0b529841e75090f478056e67}{gerarEfeitosNefastos}}(listaAntenas,\ matriz,\ linhas,\ colunas);}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00060}00060\ \ \ \ \ \textcolor{comment}{//\ Exibir\ matriz}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00061}00061\ \ \ \ \ \textcolor{comment}{//setlocale(LC\_ALL,\ "{}C"{});}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00062}00062\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)nMatriz:\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ linhas;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ colunas;\ j++)}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%c"{}},\ matriz[i][j]);}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00069}00069\ \ \ \ \ \textcolor{comment}{//\ Listar\ antenas}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00070}00070\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)nAntenas:\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{struct_antena}{Antena}}\ *a\ =\ listaAntenas;\ a\ !=\ NULL;\ a\ =\ a-\/>\mbox{\hyperlink{struct_antena_ae518c9afee14b875ac030364762e23ba}{next}})}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Frequencia:\ \%c\ |\ Linha:\ \%d\ |\ Coluna:\ \%d\(\backslash\)n"{}},\ a-\/>freq,\ a-\/>linha\ +\ 1,\ a-\/>coluna\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00074}00074\ \ \ \ \ \textcolor{comment}{//\ Listar\ efeitos\ nefastos}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00075}00075\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)nEfeitos\ nefastos:\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00076}00076\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ linhas;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ colunas;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (matriz[i][j]\ ==\ \textcolor{charliteral}{'\#'})\ \{}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Efeito\(\backslash\)t\(\backslash\)t|\ Linha:\ \%d\(\backslash\)t|\ Coluna:\ \%d\(\backslash\)n"{}},\ i\ +\ 1,\ j\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00083}00083\ \}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00094}\mbox{\hyperlink{matriz_8c_a5ea6087f0b529841e75090f478056e67}{00094}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{matriz_8c_a5ea6087f0b529841e75090f478056e67}{gerarEfeitosNefastos}}(\mbox{\hyperlink{struct_antena}{Antena}}\ *listaAntenas,\ \textcolor{keywordtype}{char}\ matriz[][100],\ \textcolor{keywordtype}{int}\ linhas,\ \textcolor{keywordtype}{int}\ colunas)\ \{}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{struct_antena}{Antena}}\ *a1\ =\ listaAntenas;\ a1\ !=\ NULL;\ a1\ =\ a1-\/>\mbox{\hyperlink{struct_antena_ae518c9afee14b875ac030364762e23ba}{next}})\ \{}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{struct_antena}{Antena}}\ *a2\ =\ a1-\/>\mbox{\hyperlink{struct_antena_ae518c9afee14b875ac030364762e23ba}{next}};\ a2\ !=\ NULL;\ a2\ =\ a2-\/>\mbox{\hyperlink{struct_antena_ae518c9afee14b875ac030364762e23ba}{next}})\ \{}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (a1-\/>freq\ ==\ a2-\/>freq)\ \{}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dx\ =\ a2-\/>linha\ -\/\ a1-\/>linha;}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dy\ =\ a2-\/>coluna\ -\/\ a1-\/>coluna;}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Geração\ antes\ da\ primeira\ antena}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ linhaAntes\ =\ a1-\/>linha\ -\/\ dx;}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ colunaAntes\ =\ a1-\/>coluna\ -\/\ dy;}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (linhaAntes\ >=\ 0\ \&\&\ linhaAntes\ <\ linhas\ \&\&}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ colunaAntes\ >=\ 0\ \&\&\ colunaAntes\ <\ colunas)\ \{}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matriz[linhaAntes][colunaAntes]\ =\ \textcolor{charliteral}{'\#'};}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Geração\ depois\ da\ segunda\ antena}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ linhaDepois\ =\ a2-\/>linha\ +\ dx;}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ colunaDepois\ =\ a2-\/>coluna\ +\ dy;}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (linhaDepois\ >=\ 0\ \&\&\ linhaDepois\ <\ linhas\ \&\&}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ colunaDepois\ >=\ 0\ \&\&\ colunaDepois\ <\ colunas)\ \{}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matriz[linhaDepois][colunaDepois]\ =\ \textcolor{charliteral}{'\#'};}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00117}00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00118}00118\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00119}00119\ \}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00130}\mbox{\hyperlink{matriz_8c_ae03a71ace65214ff61d91e0338498fc2}{00130}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{matriz_8c_ae03a71ace65214ff61d91e0338498fc2}{carregarMatrizDoFicheiro}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *nomeFicheiro,\ \mbox{\hyperlink{struct_antena}{Antena}}\ **aux,\ \textcolor{keywordtype}{int}\ *linhas,\ \textcolor{keywordtype}{int}\ *colunas)\ \{}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00131}00131\ \ \ \ \ FILE\ *file\ =\ fopen(nomeFicheiro,\ \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00132}00132\ \ \ \ \ \textcolor{keywordflow}{if}\ (!file)\ \{}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00133}00133\ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}Erro\ ao\ abrir\ ficheiro"{}});}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00134}00134\ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00135}00135\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00137}00137\ \ \ \ \ \textcolor{keywordtype}{char}\ linha[256];}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00138}00138\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0,\ maxCol\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00139}00139\ \ \ \ \ \textcolor{keywordflow}{while}\ (fgets(linha,\ \textcolor{keyword}{sizeof}(linha),\ file))\ \{}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ j;}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00141}00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ linha[j]\ !=\ \textcolor{charliteral}{'\(\backslash\)0'}\ \&\&\ linha[j]\ !=\ \textcolor{charliteral}{'\(\backslash\)n'};\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (linha[j]\ !=\ \textcolor{charliteral}{'.'})}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{antena_8c_acc0269270f879978a2b329a200244697}{inserirAntena}}(aux,\ linha[j],\ i,\ j);}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00144}00144\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00145}00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j\ >\ maxCol)\ maxCol\ =\ j;}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00146}00146\ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00147}00147\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00148}00148\ \ \ \ \ *linhas\ =\ i;}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00149}00149\ \ \ \ \ *colunas\ =\ maxCol;}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00150}00150\ \ \ \ \ fclose(file);}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00151}00151\ \}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00159}\mbox{\hyperlink{matriz_8c_a37b39a41a7b261b151581be51bc1dd2b}{00159}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{matriz_8c_a37b39a41a7b261b151581be51bc1dd2b}{listarNefastos}}(\mbox{\hyperlink{struct_node}{Node}}\ *aux)\ \{}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00160}00160\ \ \ \ \ \textcolor{comment}{//setlocale(LC\_ALL,\ "{}C"{});}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00161}00161\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%-\/10s\ \%-\/10s\(\backslash\)n"{}},\ \textcolor{stringliteral}{"{}Linha"{}},\ \textcolor{stringliteral}{"{}Coluna"{}});}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00162}00162\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%-\/10s\ \%-\/10s\(\backslash\)n"{}},\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/"{}},\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00163}00163\ \ \ \ \ \textcolor{keywordflow}{for}\ (;\ aux;\ aux\ =\ aux-\/>\mbox{\hyperlink{struct_node_af67b110ca1a258b793bf69d306929b22}{next}})}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00164}00164\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%-\/10d\ \%-\/10d\(\backslash\)n"{}},\ aux-\/>\mbox{\hyperlink{struct_node_aed29de4c5d116b3f4a9880896d0023d3}{linha}},\ aux-\/>\mbox{\hyperlink{struct_node_a42f897b88b42ed9fc526b5794fcf934f}{coluna}});}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00165}00165\ \}}
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{matriz_8c_source_l00167}00167\ }
+
+\end{DoxyCode}

@@ -1,0 +1,157 @@
+.TH "matriz.h" 3 "EDA_16939_Fase1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+matriz.h
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'antena\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBNode\fP"
+.br
+.RI "Estrutura de um nó da lista ligada de efeitos nefastos\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct Node \fBNode\fP"
+.br
+.RI "Estrutura de um nó da lista ligada de efeitos nefastos\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBexibirMatriz\fP (\fBAntena\fP *listaAntenas, int linhas, int colunas)"
+.br
+.RI "Exibe a matriz no terminal, com as antenas e os efeitos nefastos causados por pares de antenas com a mesma frequência\&. "
+.ti -1c
+.RI "void \fBgerarEfeitosNefastos\fP (\fBAntena\fP *listaAntenas, char matriz[][100], int linhas, int colunas)"
+.br
+.RI "Gera efeitos nefastos causados por pares de antenas com a mesma frequência\&. "
+.ti -1c
+.RI "void \fBcarregarMatrizDoFicheiro\fP (const char *nomeFicheiro, \fBAntena\fP **listaAntenas, int *linhas, int *colunas)"
+.br
+.RI "Carrega uma matriz de um ficheiro, criando a lista de antenas a partir dos dados encontrados\&. "
+.ti -1c
+.RI "void \fBlistarNefastos\fP (\fBNode\fP *lista)"
+.br
+.RI "Lista todas as posições afetadas por efeitos nefastos\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+Daniel Vilaça (a16939@alunos.ipca.pt) 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+2025-03-30
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+Copyright (c) 2025 
+.RE
+.PP
+
+.PP
+Definition in file \fBmatriz\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void carregarMatrizDoFicheiro (const char * nomeFicheiro, \fBAntena\fP ** aux, int * linhas, int * colunas)"
+
+.PP
+Carrega uma matriz de um ficheiro, criando a lista de antenas a partir dos dados encontrados\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInomeFicheiro\fP Path do ficheiro a ser carregado 
+.br
+\fIlistaAntenas\fP Apontador para a lista de antenas 
+.br
+\fIlinhas\fP Número de linhas da matriz 
+.br
+\fIcolunas\fP Número de colunas da matriz
+.br
+\fInomeFicheiro\fP Path do ficheiro a ser carregado 
+.br
+\fIaux\fP Apontador para a lista onde as antenas serão armazenadas 
+.br
+\fIlinhas\fP Apontador para armazenar o número de linhas da matriz carregada 
+.br
+\fIcolunas\fP Apontador para armazenar o número de colunas da matriz carregada 
+.RE
+.PP
+
+.PP
+Definition at line \fB130\fP of file \fBmatriz\&.c\fP\&.
+.SS "void exibirMatriz (\fBAntena\fP * listaAntenas, int linhas, int colunas)"
+
+.PP
+Exibe a matriz no terminal, com as antenas e os efeitos nefastos causados por pares de antenas com a mesma frequência\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlistaAntenas\fP Lista de antenas a serem exibidas 
+.br
+\fIlinhas\fP Número de linhas da matriz 
+.br
+\fIcolunas\fP Número de colunas da matriz 
+.RE
+.PP
+
+.PP
+Definition at line \fB45\fP of file \fBmatriz\&.c\fP\&.
+.SS "void gerarEfeitosNefastos (\fBAntena\fP * listaAntenas, char matriz[][100], int linhas, int colunas)"
+
+.PP
+Gera efeitos nefastos causados por pares de antenas com a mesma frequência\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlistaAntenas\fP Apontador Lista de antenas 
+.br
+\fImatriz\fP Matriz onde serão marcados os efeitos ("#") 
+.br
+\fIlinhas\fP Número de linhas da matriz 
+.br
+\fIcolunas\fP Número de colunas da matriz 
+.RE
+.PP
+
+.PP
+Definition at line \fB94\fP of file \fBmatriz\&.c\fP\&.
+.SS "void listarNefastos (\fBNode\fP * aux)"
+
+.PP
+Lista todas as posições afetadas por efeitos nefastos\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlista\fP Apontador para a lista de efeitos nefastos
+.br
+\fIaux\fP Lista ligada de posições nefastas 
+.RE
+.PP
+
+.PP
+Definition at line \fB159\fP of file \fBmatriz\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EDA_16939_Fase1 from the source code\&.

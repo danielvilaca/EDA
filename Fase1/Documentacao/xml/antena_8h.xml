@@ -1,0 +1,428 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="antena_8h" kind="file" language="C++">
+    <compoundname>antena.h</compoundname>
+    <includedby refid="antena_8c" local="yes">antena.c</includedby>
+    <includedby refid="main_8c" local="yes">main.c</includedby>
+    <includedby refid="matriz_8h" local="yes">matriz.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>antena.c</label>
+        <link refid="antena_8c"/>
+      </node>
+      <node id="1">
+        <label>antena.h</label>
+        <link refid="antena_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="5">
+        <label>matriz.c</label>
+        <link refid="matriz_8c"/>
+      </node>
+      <node id="4">
+        <label>matriz.h</label>
+        <link refid="matriz_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_antena" prot="public">Antena</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="antena_8h_1a843ab8b81393e8ebb3eb6b76e349acc2" prot="public" static="no">
+        <type>struct Antena</type>
+        <definition>typedef struct Antena Antena</definition>
+        <argsstring></argsstring>
+        <name>Antena</name>
+        <briefdescription>
+<para>Estrutura que representa uma antena. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="antena.h" line="24" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="antena_8h_1a00a386a23b9f361d1f4c1cb0e735ca5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_antena" kindref="compound">Antena</ref> *</type>
+        <definition>Antena * criarAntena</definition>
+        <argsstring>(char freq, int linha, int coluna)</argsstring>
+        <name>criarAntena</name>
+        <param>
+          <type>char</type>
+          <declname>freq</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>linha</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>coluna</declname>
+        </param>
+        <briefdescription>
+<para>Função que cria uma nova antena. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Char que representa a frequência/tipo de antena </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha da matriz onde a antena será colocada </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coluna</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coluna da matriz onde a antena será colocada </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Antena* Apontador para a nova antena criada</para>
+</simplesect>
+Função que cria uma nova antena.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Char que representa a frequência/tipo de antena </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha da matriz onde a antena será colocada </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coluna</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coluna da matriz onde a antena será colocada </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Antena* Apontador para a nova antena criada </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="antena.h" line="35" column="8" bodyfile="antena.c" bodystart="26" bodyend="37" declfile="antena.h" declline="35" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="antena_8h_1acc0269270f879978a2b329a200244697" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void inserirAntena</definition>
+        <argsstring>(Antena **aux, char freq, int linha, int coluna)</argsstring>
+        <name>inserirAntena</name>
+        <param>
+          <type><ref refid="struct_antena" kindref="compound">Antena</ref> **</type>
+          <declname>aux</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>freq</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>linha</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>coluna</declname>
+        </param>
+        <briefdescription>
+<para>Função que insere uma nova antena na lista. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aux</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o apontador da lista de antenas </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Char que representa a frequência/tipo da nova antena </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha onde será inserida </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coluna</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coluna onde será inserida</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Função que insere uma nova antena na lista.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aux</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o apontador da lista de antenas </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Char que representa a frequência/tipo de antena </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha onde será inserida </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coluna</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coluna onde será inserida </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="antena.h" line="46" column="6" bodyfile="antena.c" bodystart="48" bodyend="59" declfile="antena.h" declline="46" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="antena_8h_1ae669c21caa03887ddee7c957a10fbf40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void removerAntena</definition>
+        <argsstring>(Antena **aux, int linha, int coluna)</argsstring>
+        <name>removerAntena</name>
+        <param>
+          <type><ref refid="struct_antena" kindref="compound">Antena</ref> **</type>
+          <declname>aux</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>linha</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>coluna</declname>
+        </param>
+        <briefdescription>
+<para>Função que remove uma antena localizada numa posição especifica da matriz. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lista</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o apontador da lista de antenas </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha da antena a remover </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coluna</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coluna da antena a remover</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Função que remove uma antena localizada numa posição especifica da matriz.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aux</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o apontador da lista de antenas </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha da antena a remover </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coluna</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coluna da antena a remover </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="antena.h" line="56" column="6" bodyfile="antena.c" bodystart="69" bodyend="82" declfile="antena.h" declline="56" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="antena_8h_1a2a18909c27210e17ff28c6b4c8aa29a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void listarAntenas</definition>
+        <argsstring>(Antena *aux)</argsstring>
+        <name>listarAntenas</name>
+        <param>
+          <type><ref refid="struct_antena" kindref="compound">Antena</ref> *</type>
+          <declname>aux</declname>
+        </param>
+        <briefdescription>
+<para>Lista todas as antenas presentes na lista ligada. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aux</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a lista de antenas </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="antena.h" line="64" column="6" declfile="antena.h" declline="64" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="antena_8h_1a66ea723ccc8f6e107b0c215c4b2dd28f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libertarAntenas</definition>
+        <argsstring>(Antena *aux)</argsstring>
+        <name>libertarAntenas</name>
+        <param>
+          <type><ref refid="struct_antena" kindref="compound">Antena</ref> *</type>
+          <declname>aux</declname>
+        </param>
+        <briefdescription>
+<para>Liberta a memória ocupada por todas as antenas da lista. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aux</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a lista de antenas.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Liberta a memória ocupada por todas as antenas da lista.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aux</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a lista de antenas </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="antena.h" line="72" column="6" bodyfile="antena.c" bodystart="106" bodyend="113" declfile="antena.h" declline="72" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Daniel Vilaça (<ulink url="mailto:a16939@alunos.ipca.pt">a16939@alunos.ipca.pt</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+<simplesect kind="date"><para>2025-03-30</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ANTENA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ANTENA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="struct_antena" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_antena" kindref="compound">Antena</ref><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>freq;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha,<sp/>coluna;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_antena" kindref="compound">Antena</ref><sp/>*next;</highlight></codeline>
+<codeline lineno="24" refid="antena_8h_1a843ab8b81393e8ebb3eb6b76e349acc2" refkind="member"><highlight class="normal">}<sp/><ref refid="struct_antena" kindref="compound">Antena</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><ref refid="struct_antena" kindref="compound">Antena</ref><sp/>*<ref refid="antena_8h_1a00a386a23b9f361d1f4c1cb0e735ca5d" kindref="member">criarAntena</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>freq,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coluna);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="antena_8h_1acc0269270f879978a2b329a200244697" kindref="member">inserirAntena</ref>(<ref refid="struct_antena" kindref="compound">Antena</ref><sp/>**aux,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>freq,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coluna);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="antena_8h_1ae669c21caa03887ddee7c957a10fbf40" kindref="member">removerAntena</ref>(<ref refid="struct_antena" kindref="compound">Antena</ref><sp/>**aux,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coluna);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="antena_8h_1a2a18909c27210e17ff28c6b4c8aa29a7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="antena_8h_1a2a18909c27210e17ff28c6b4c8aa29a7" kindref="member">listarAntenas</ref>(<ref refid="struct_antena" kindref="compound">Antena</ref><sp/>*aux);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="antena_8h_1a66ea723ccc8f6e107b0c215c4b2dd28f" kindref="member">libertarAntenas</ref>(<ref refid="struct_antena" kindref="compound">Antena</ref><sp/>*aux);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="antena.h"/>
+  </compounddef>
+</doxygen>

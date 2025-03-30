@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="struct_antena" kind="struct"><name>Antena</name>
+    <member refid="struct_antena_1acbb0ceb3114405ec0fd07f67b79bd3e5" kind="variable"><name>freq</name></member>
+    <member refid="struct_antena_1a2913fa9623f812bffff810528877ee24" kind="variable"><name>linha</name></member>
+    <member refid="struct_antena_1ad28f77663b945c81f26e84c1b62cb63f" kind="variable"><name>coluna</name></member>
+    <member refid="struct_antena_1ae518c9afee14b875ac030364762e23ba" kind="variable"><name>next</name></member>
+  </compound>
+  <compound refid="struct_node" kind="struct"><name>Node</name>
+    <member refid="struct_node_1aed29de4c5d116b3f4a9880896d0023d3" kind="variable"><name>linha</name></member>
+    <member refid="struct_node_1a42f897b88b42ed9fc526b5794fcf934f" kind="variable"><name>coluna</name></member>
+    <member refid="struct_node_1af67b110ca1a258b793bf69d306929b22" kind="variable"><name>next</name></member>
+  </compound>
+  <compound refid="antena_8c" kind="file"><name>antena.c</name>
+    <member refid="antena_8c_1a00a386a23b9f361d1f4c1cb0e735ca5d" kind="function"><name>criarAntena</name></member>
+    <member refid="antena_8c_1acc0269270f879978a2b329a200244697" kind="function"><name>inserirAntena</name></member>
+    <member refid="antena_8c_1ae669c21caa03887ddee7c957a10fbf40" kind="function"><name>removerAntena</name></member>
+    <member refid="antena_8c_1a95eef017973172f510d032bc882e2053" kind="function"><name>auxrAntenas</name></member>
+    <member refid="antena_8c_1a66ea723ccc8f6e107b0c215c4b2dd28f" kind="function"><name>libertarAntenas</name></member>
+  </compound>
+  <compound refid="antena_8h" kind="file"><name>antena.h</name>
+    <member refid="antena_8h_1a843ab8b81393e8ebb3eb6b76e349acc2" kind="typedef"><name>Antena</name></member>
+    <member refid="antena_8h_1a00a386a23b9f361d1f4c1cb0e735ca5d" kind="function"><name>criarAntena</name></member>
+    <member refid="antena_8h_1acc0269270f879978a2b329a200244697" kind="function"><name>inserirAntena</name></member>
+    <member refid="antena_8h_1ae669c21caa03887ddee7c957a10fbf40" kind="function"><name>removerAntena</name></member>
+    <member refid="antena_8h_1a2a18909c27210e17ff28c6b4c8aa29a7" kind="function"><name>listarAntenas</name></member>
+    <member refid="antena_8h_1a66ea723ccc8f6e107b0c215c4b2dd28f" kind="function"><name>libertarAntenas</name></member>
+  </compound>
+  <compound refid="main_8c" kind="file"><name>main.c</name>
+    <member refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="matriz_8c" kind="file"><name>matriz.c</name>
+    <member refid="matriz_8c_1a14d59b78779d5b1b5ab79aac7c3eb43a" kind="function"><name>inserirNefasto</name></member>
+    <member refid="matriz_8c_1aba3864945dc2745df349ff8d16243f54" kind="function"><name>exibirMatriz</name></member>
+    <member refid="matriz_8c_1a5ea6087f0b529841e75090f478056e67" kind="function"><name>gerarEfeitosNefastos</name></member>
+    <member refid="matriz_8c_1ae03a71ace65214ff61d91e0338498fc2" kind="function"><name>carregarMatrizDoFicheiro</name></member>
+    <member refid="matriz_8c_1a37b39a41a7b261b151581be51bc1dd2b" kind="function"><name>listarNefastos</name></member>
+  </compound>
+  <compound refid="matriz_8h" kind="file"><name>matriz.h</name>
+    <member refid="matriz_8h_1a3b09f37e675bcd48a01bf22155996872" kind="typedef"><name>Node</name></member>
+    <member refid="matriz_8h_1aba3864945dc2745df349ff8d16243f54" kind="function"><name>exibirMatriz</name></member>
+    <member refid="matriz_8h_1a5ea6087f0b529841e75090f478056e67" kind="function"><name>gerarEfeitosNefastos</name></member>
+    <member refid="matriz_8h_1a9d66c32dc5785c33196976b9b9c8e43e" kind="function"><name>carregarMatrizDoFicheiro</name></member>
+    <member refid="matriz_8h_1a78a6ce8e44d392a2c309e13677d40dd1" kind="function"><name>listarNefastos</name></member>
+  </compound>
+</doxygenindex>
