@@ -12,6 +12,7 @@
 #ifndef MATRIZ_H
 #define MATRIZ_H
 
+#include <stdbool.h>
 #include "antena.h"
 
 
@@ -24,6 +25,8 @@ typedef struct Node {
     struct Node *next;
 } Node;
 
+
+bool inserirNefasto(Node **aux, int linha, int coluna);
 
 /**
  * @brief Exibe a matriz no terminal, com as antenas e os efeitos nefastos causados por pares de antenas com a mesma frequência

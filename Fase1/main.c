@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include "antena.h"
 #include "matriz.h"
 
@@ -41,6 +42,7 @@ int main() {
             libertarAntenas(listaAntenas);
             listaAntenas = NULL;
             carregarMatrizDoFicheiro(nomeFicheiro, &listaAntenas, &linhas, &colunas);
+            printf("Matriz carregada com sucesso.\n");
 
         } else if (opcao == 2) {
 
@@ -53,17 +55,23 @@ int main() {
             scanf("%d", &linha);
             printf("Coluna: ");
             scanf("%d", &coluna);
-            inserirAntena(&listaAntenas, freq, linha - 1, coluna - 1);
+            if (inserirAntena(&listaAntenas, freq, linha - 1, coluna - 1))
+                printf("Antena inserida com sucesso.\n");
+            else
+                printf("Erro ao inserir antena.\n");
 
         } else if (opcao == 3) {
 
             int linha, coluna;
-            
+
             printf("Linha: ");
             scanf("%d", &linha);
             printf("Coluna: ");
             scanf("%d", &coluna);
-            removerAntena(&listaAntenas, linha - 1, coluna - 1);
+            if (removerAntena(&listaAntenas, linha - 1, coluna - 1))
+                printf("Antena removida com sucesso.\n");
+            else
+                printf("Antena não encontrada.\n");
 
         } else if (opcao == 4) {
 

@@ -13,7 +13,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <locale.h>
+#include <stdbool.h>
 #include "matriz.h"
+
 
 
 /**
@@ -23,15 +25,18 @@
  * @param linha Linha da célula afetada
  * @param coluna Coluna da célula afetada
  */
-void inserirNefasto(Node **aux, int linha, int coluna) {
+bool inserirNefasto(Node **aux, int linha, int coluna) {
     for (Node *n = *aux; n != NULL; n = n->next)
-        if (n->linha == linha && n->coluna == coluna) return;
+        if (n->linha == linha && n->coluna == coluna)
+            return false;
 
     Node *novo = (Node *)malloc(sizeof(Node));
+    if (novo == NULL) return false;
     novo->linha = linha;
     novo->coluna = coluna;
     novo->next = *aux;
     *aux = novo;
+    return true;
 }
 
 
@@ -54,7 +59,6 @@ void exibirMatriz(Antena *listaAntenas, int linhas, int colunas) {
     for (Antena *a = listaAntenas; a != NULL; a = a->next)
         matriz[a->linha][a->coluna] = a->freq;
 
-    // Gerar efeitos nefastos
     gerarEfeitosNefastos(listaAntenas, matriz, linhas, colunas);
 
     // Exibir matriz
@@ -98,7 +102,7 @@ void gerarEfeitosNefastos(Antena *listaAntenas, char matriz[][100], int linhas, 
                 int dx = a2->linha - a1->linha;
                 int dy = a2->coluna - a1->coluna;
 
-                // Geração antes da primeira antena
+                // Antes da primeira antena
                 int linhaAntes = a1->linha - dx;
                 int colunaAntes = a1->coluna - dy;
                 if (linhaAntes >= 0 && linhaAntes < linhas &&
@@ -106,7 +110,7 @@ void gerarEfeitosNefastos(Antena *listaAntenas, char matriz[][100], int linhas, 
                     matriz[linhaAntes][colunaAntes] = '#';
                 }
 
-                // Geração depois da segunda antena
+                // Depois da segunda antena
                 int linhaDepois = a2->linha + dx;
                 int colunaDepois = a2->coluna + dy;
                 if (linhaDepois >= 0 && linhaDepois < linhas &&
@@ -130,7 +134,7 @@ void gerarEfeitosNefastos(Antena *listaAntenas, char matriz[][100], int linhas, 
 void carregarMatrizDoFicheiro(const char *nomeFicheiro, Antena **aux, int *linhas, int *colunas) {
     FILE *file = fopen(nomeFicheiro, "r");
     if (!file) {
-        perror("Erro ao abrir ficheiro");
+        //perror("Erro ao abrir ficheiro");
         exit(1);
     }
 

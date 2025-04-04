@@ -43,17 +43,17 @@ Antena *criarAntena(char freq, int linha, int coluna);
  * @param linha Linha onde será inserida
  * @param coluna Coluna onde será inserida
  */
-void inserirAntena(Antena **aux, char freq, int linha, int coluna);
+bool inserirAntena(Antena **aux, char freq, int linha, int coluna);
 
 
 /**
  * @brief Função que remove uma antena localizada numa posição especifica da matriz.
  *
- * @param lista Apontador para o apontador da lista de antenas
+ * @param aux Apontador para o apontador da lista de antenas
  * @param linha Linha da antena a remover
  * @param coluna Coluna da antena a remover
  */
-void removerAntena(Antena **aux, int linha, int coluna);
+bool removerAntena(Antena **aux, int linha, int coluna);
 
 
 /**

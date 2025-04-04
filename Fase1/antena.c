@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#include <stdbool.h>
 #include "antena.h"
 
 
@@ -33,6 +34,7 @@ Antena *criarAntena(char freq, int linha, int coluna) {
     nova->linha = linha;
     nova->coluna = coluna;
     nova->next = NULL;
+
     return nova;
 }
 
@@ -45,9 +47,9 @@ Antena *criarAntena(char freq, int linha, int coluna) {
  * @param linha Linha onde será inserida
  * @param coluna Coluna onde será inserida
  */
-void inserirAntena(Antena **aux, char freq, int linha, int coluna) {
+bool inserirAntena(Antena **aux, char freq, int linha, int coluna) {
     Antena *nova = criarAntena(freq, linha, coluna);
-    nova->next = NULL;
+    if (!nova) return false;
     if (*aux == NULL) {
         *aux = nova;
     } else {
@@ -56,6 +58,7 @@ void inserirAntena(Antena **aux, char freq, int linha, int coluna) {
             atual = atual->next;
         atual->next = nova;
     }
+    return true;
 }
 
 
@@ -66,19 +69,19 @@ void inserirAntena(Antena **aux, char freq, int linha, int coluna) {
  * @param linha Linha da antena a remover
  * @param coluna Coluna da antena a remover
  */
-void removerAntena(Antena **aux, int linha, int coluna) {
+bool removerAntena(Antena **aux, int linha, int coluna) {
     Antena *atual = *aux, *anterior = NULL;
     while (atual) {
         if (atual->linha == linha && atual->coluna == coluna) {
             if (anterior) anterior->next = atual->next;
             else *aux = atual->next;
             free(atual);
-            return;
+            return true;
         }
         anterior = atual;
         atual = atual->next;
     }
-    printf("Antena em (%d, %d) não encontrada.\n", linha + 1, coluna + 1);
+    return false;
 }
 
 
@@ -87,7 +90,7 @@ void removerAntena(Antena **aux, int linha, int coluna) {
  *
  * @param aux Apontador para a lista de antenas
  */
-void auxrAntenas(Antena *aux) {
+void listarAntenas(Antena *aux) {
     setlocale(LC_ALL, "C");
     printf("\n%-12s %-10s %-10s\n", "Frequencia", "Linha", "Coluna");
     printf("%-12s %-10s %-10s\n", "-----------", "-----", "------");
