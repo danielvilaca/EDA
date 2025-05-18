@@ -3,10 +3,19 @@
 #include <string.h>
 #include "grafo.h"
 
+
+/// @brief Inicializa o grafo (número de vértices) a 0
+/// @param g
 void inicializaGrafo(Grafo *g) {
     g->n_vertices = 0;
 }
 
+/// @brief Adiciona uma nova antena (vértice) ao grafo.
+/// @param g Apontador para o grafo
+/// @param x Coordenada x da antena
+/// @param y Coordenada y da antena
+/// @param freq Frequência de ressonância da antena
+/// @return ID atribuído ao novo vértice ou -1 se o grafo estiver cheio
 int adicionaVertice(Grafo *g, int x, int y, char freq) {
     if (g->n_vertices >= MAX_VERTICES) return -1;
     int id = g->n_vertices;
@@ -19,6 +28,10 @@ int adicionaVertice(Grafo *g, int x, int y, char freq) {
     return id;
 }
 
+/// @brief Adiciona uma aresta bidirecional entre dois vértices com a mesma frequência
+/// @param g Apontador para o grafo
+/// @param orig Vértice de origem
+/// @param dest Vértice de destino
 void adicionaAresta(Grafo *g, int orig, int dest) {
     if (orig < 0 || dest < 0 || orig >= g->n_vertices || dest >= g->n_vertices) return;
     if (g->vertices[orig].freq != g->vertices[dest].freq) return;
@@ -35,6 +48,8 @@ void adicionaAresta(Grafo *g, int orig, int dest) {
     g->vertices[dest].lista = nova2;
 }
 
+/// @brief Imprime todos os vértices do grafo e as suas ligações (arestas)
+/// @param g Apontador
 void imprimeGrafo(Grafo *g) {
     for (int i = 0; i < g->n_vertices; i++) {
         printf("Antena %d [%c] em (%d,%d) -> ", g->vertices[i].id, g->vertices[i].freq, g->vertices[i].x, g->vertices[i].y);
@@ -47,6 +62,10 @@ void imprimeGrafo(Grafo *g) {
     }
 }
 
+/// @brief Função auxiliar recursiva para DFS. Visita os vértices ligados ao atual
+/// @param g Apontador
+/// @param id Vértice atual
+/// @param visitado Array de vértices já visitados
 void dfs_visit(Grafo *g, int id, int *visitado) {
     visitado[id] = 1;
     printf("Visitado DFS: Antena %d [%c] em (%d,%d)\n",
@@ -64,6 +83,9 @@ void dfs_visit(Grafo *g, int id, int *visitado) {
     }
 }
 
+/// @brief Inicia a procura em profundidade (DFS) a partir de uma antena
+/// @param g Apontador
+/// @param start_id Antena de partida
 void dfs(Grafo *g, int start_id) {
     if (start_id < 0 || start_id >= g->n_vertices) {
         printf("ID inválido.\n");
@@ -75,7 +97,9 @@ void dfs(Grafo *g, int start_id) {
     dfs_visit(g, start_id, visitado);
 }
 
-
+/// @brief Inicia a procura em largura (BFS) a partir de uma antena
+/// @param g Apontador
+/// @param start_id Antena de partida
 void bfs(Grafo *g, int start_id) {
     if (start_id < 0 || start_id >= g->n_vertices) {
         printf("ID inválido.\n");
@@ -110,6 +134,13 @@ void bfs(Grafo *g, int start_id) {
     }
 }
 
+/// @brief Função recursiva auxiliar para listar todos os caminhos entre duas antenas
+/// @param g Apontador
+/// @param atual Vértice atual
+/// @param destino Vértice de destino
+/// @param visitado Array de vértices já visitados
+/// @param path Array com o caminho atual
+/// @param path_len Comprimento atual do caminho
 void listarCaminhosAux(Grafo *g, int atual, int destino, int *visitado, int *path, int path_len) {
     visitado[atual] = 1;
     path[path_len++] = atual;
@@ -138,6 +169,10 @@ void listarCaminhosAux(Grafo *g, int atual, int destino, int *visitado, int *pat
     visitado[atual] = 0; // backtrack
 }
 
+/// @brief Lista todos os caminhos possíveis entre duas antenas com a mesma frequência
+/// @param g Apontador
+/// @param origem Antena de origem
+/// @param destino Antena de destino
 void listarCaminhos(Grafo *g, int origem, int destino) {
     if (origem < 0 || origem >= g->n_vertices || destino < 0 || destino >= g->n_vertices) {
         printf("ID inválido.\n");
