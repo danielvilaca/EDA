@@ -1,3 +1,15 @@
+/**
+ * @file grafo.c
+ * @author Daniel Vilaça (a16939@alunos.ipca.pt)
+ * @brief
+ * @version 1.0
+ * @date 2025-05-18
+ *
+ * @copyright Copyright (c) 2025
+ *
+ */
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -88,7 +100,7 @@ void dfs_visit(Grafo *g, int id, int *visitado) {
 /// @param start_id Antena de partida
 void dfs(Grafo *g, int start_id) {
     if (start_id < 0 || start_id >= g->n_vertices) {
-        printf("ID inválido.\n");
+        printf("ID invalido.\n");
         return;
     }
 
@@ -102,7 +114,7 @@ void dfs(Grafo *g, int start_id) {
 /// @param start_id Antena de partida
 void bfs(Grafo *g, int start_id) {
     if (start_id < 0 || start_id >= g->n_vertices) {
-        printf("ID inválido.\n");
+        printf("ID invalido.\n");
         return;
     }
 
@@ -175,12 +187,12 @@ void listarCaminhosAux(Grafo *g, int atual, int destino, int *visitado, int *pat
 /// @param destino Antena de destino
 void listarCaminhos(Grafo *g, int origem, int destino) {
     if (origem < 0 || origem >= g->n_vertices || destino < 0 || destino >= g->n_vertices) {
-        printf("ID inválido.\n");
+        printf("ID invalido.\n");
         return;
     }
 
     if (g->vertices[origem].freq != g->vertices[destino].freq) {
-        printf("Antenas com frequências diferentes não estão ligadas.\n");
+        printf("Antenas com frequencias diferentes nao estao ligadas.\n");
         return;
     }
 

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="structadj" kind="struct"><name>adj</name>
+    <member refid="structadj_1aba3f1ed3cfde575d5df2ef73257f05c7" kind="variable"><name>dest</name></member>
+    <member refid="structadj_1a69bb00e4cc274690297b61d3c473cb6e" kind="variable"><name>prox</name></member>
+  </compound>
+  <compound refid="structgrafo" kind="struct"><name>grafo</name>
+    <member refid="structgrafo_1ab11912489fc3c8a0875dff12417fe95a" kind="variable"><name>n_vertices</name></member>
+    <member refid="structgrafo_1a98dbb59f21c2cc834513f36fd1844998" kind="variable"><name>vertices</name></member>
+  </compound>
+  <compound refid="structvertice" kind="struct"><name>vertice</name>
+    <member refid="structvertice_1a272620fb2a8c43685ae5e8aa8ed2d474" kind="variable"><name>id</name></member>
+    <member refid="structvertice_1a2312af36cc1811412affd620f89f39f9" kind="variable"><name>x</name></member>
+    <member refid="structvertice_1a31931be8cc52bce06abf7a990569dc7f" kind="variable"><name>y</name></member>
+    <member refid="structvertice_1a61158d3b9accd96f23a9e45901f4219f" kind="variable"><name>freq</name></member>
+    <member refid="structvertice_1acce6174a7ae355d6d8c3de9bae9862c3" kind="variable"><name>lista</name></member>
+  </compound>
+  <compound refid="grafo_8c" kind="file"><name>grafo.c</name>
+    <member refid="grafo_8c_1a41f43196384519bc86cedaa2add15902" kind="function"><name>inicializaGrafo</name></member>
+    <member refid="grafo_8c_1ad0e922e8998db2ce1b829ee52ed583a7" kind="function"><name>adicionaVertice</name></member>
+    <member refid="grafo_8c_1a66d9d6385ec027346ffc2c39ad307ad4" kind="function"><name>adicionaAresta</name></member>
+    <member refid="grafo_8c_1a4260eaefd00a66631206e5743ae47b88" kind="function"><name>imprimeGrafo</name></member>
+    <member refid="grafo_8c_1a9d360aab7800fed0523977436f7d689b" kind="function"><name>dfs_visit</name></member>
+    <member refid="grafo_8c_1a562457b89adc87f2389c61373499fd83" kind="function"><name>dfs</name></member>
+    <member refid="grafo_8c_1a59a62882be97d2e4daf143a5585b10af" kind="function"><name>bfs</name></member>
+    <member refid="grafo_8c_1a1be91eccd6e8691af9f33ddf1186eaaa" kind="function"><name>listarCaminhosAux</name></member>
+    <member refid="grafo_8c_1a3aa60bd76c822db53ccc812f1707e0b5" kind="function"><name>listarCaminhos</name></member>
+  </compound>
+  <compound refid="grafo_8h" kind="file"><name>grafo.h</name>
+    <member refid="grafo_8h_1a0fdb7b933ef091574ff57d1f36dd4167" kind="define"><name>MAX_VERTICES</name></member>
+    <member refid="grafo_8h_1aa4e42d74420121b5a48e89648fcbf905" kind="typedef"><name>Adj</name></member>
+    <member refid="grafo_8h_1a0eeaefc2bfc9ba935d96fc375f3b11fa" kind="typedef"><name>Vertice</name></member>
+    <member refid="grafo_8h_1ad2ceaa7fd9c9bab870e4fd852607631a" kind="typedef"><name>Grafo</name></member>
+    <member refid="grafo_8h_1a41f43196384519bc86cedaa2add15902" kind="function"><name>inicializaGrafo</name></member>
+    <member refid="grafo_8h_1ad0e922e8998db2ce1b829ee52ed583a7" kind="function"><name>adicionaVertice</name></member>
+    <member refid="grafo_8h_1a66d9d6385ec027346ffc2c39ad307ad4" kind="function"><name>adicionaAresta</name></member>
+    <member refid="grafo_8h_1a4260eaefd00a66631206e5743ae47b88" kind="function"><name>imprimeGrafo</name></member>
+    <member refid="grafo_8h_1a562457b89adc87f2389c61373499fd83" kind="function"><name>dfs</name></member>
+    <member refid="grafo_8h_1a59a62882be97d2e4daf143a5585b10af" kind="function"><name>bfs</name></member>
+    <member refid="grafo_8h_1a3aa60bd76c822db53ccc812f1707e0b5" kind="function"><name>listarCaminhos</name></member>
+  </compound>
+  <compound refid="main_8c" kind="file"><name>main.c</name>
+    <member refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="utils_8c" kind="file"><name>utils.c</name>
+    <member refid="utils_8c_1a0f84e909753715499c399befc6f62e4e" kind="function"><name>carregarMatrizParaGrafo</name></member>
+  </compound>
+  <compound refid="utils_8h" kind="file"><name>utils.h</name>
+    <member refid="utils_8h_1a0f84e909753715499c399befc6f62e4e" kind="function"><name>carregarMatrizParaGrafo</name></member>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md__r_e_a_d_m_e</name>
+  </compound>
+</doxygenindex>

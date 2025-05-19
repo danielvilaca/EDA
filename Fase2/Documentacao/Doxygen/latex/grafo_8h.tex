@@ -1,0 +1,230 @@
+\doxysection{grafo.\+h File Reference}
+\hypertarget{grafo_8h}{}\label{grafo_8h}\index{grafo.h@{grafo.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{grafo_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structadj}{adj}}
+\item 
+struct \mbox{\hyperlink{structvertice}{vertice}}
+\item 
+struct \mbox{\hyperlink{structgrafo}{grafo}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{grafo_8h_a0fdb7b933ef091574ff57d1f36dd4167}\label{grafo_8h_a0fdb7b933ef091574ff57d1f36dd4167} 
+\#define {\bfseries MAX\+\_\+\+VERTICES}~100
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{grafo_8h_aa4e42d74420121b5a48e89648fcbf905}\label{grafo_8h_aa4e42d74420121b5a48e89648fcbf905} 
+typedef struct \mbox{\hyperlink{structadj}{adj}} {\bfseries Adj}
+\item 
+\Hypertarget{grafo_8h_a0eeaefc2bfc9ba935d96fc375f3b11fa}\label{grafo_8h_a0eeaefc2bfc9ba935d96fc375f3b11fa} 
+typedef struct \mbox{\hyperlink{structvertice}{vertice}} {\bfseries Vertice}
+\item 
+\Hypertarget{grafo_8h_ad2ceaa7fd9c9bab870e4fd852607631a}\label{grafo_8h_ad2ceaa7fd9c9bab870e4fd852607631a} 
+typedef struct \mbox{\hyperlink{structgrafo}{grafo}} {\bfseries Grafo}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{grafo_8h_a41f43196384519bc86cedaa2add15902}{inicializa\+Grafo}} (\mbox{\hyperlink{structgrafo}{Grafo}} \texorpdfstring{$\ast$}{*}g)
+\begin{DoxyCompactList}\small\item\em Inicializa o grafo (número de vértices) a 0. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{grafo_8h_ad0e922e8998db2ce1b829ee52ed583a7}{adiciona\+Vertice}} (\mbox{\hyperlink{structgrafo}{Grafo}} \texorpdfstring{$\ast$}{*}g, int x, int y, char freq)
+\begin{DoxyCompactList}\small\item\em Adiciona uma nova antena (vértice) ao grafo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{grafo_8h_a66d9d6385ec027346ffc2c39ad307ad4}{adiciona\+Aresta}} (\mbox{\hyperlink{structgrafo}{Grafo}} \texorpdfstring{$\ast$}{*}g, int orig, int dest)
+\begin{DoxyCompactList}\small\item\em Adiciona uma aresta bidirecional entre dois vértices com a mesma frequência. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{grafo_8h_a4260eaefd00a66631206e5743ae47b88}{imprime\+Grafo}} (\mbox{\hyperlink{structgrafo}{Grafo}} \texorpdfstring{$\ast$}{*}g)
+\begin{DoxyCompactList}\small\item\em Imprime todos os vértices do grafo e as suas ligações (arestas) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{grafo_8h_a562457b89adc87f2389c61373499fd83}{dfs}} (\mbox{\hyperlink{structgrafo}{Grafo}} \texorpdfstring{$\ast$}{*}g, int start\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Inicia a procura em profundidade (DFS) a partir de uma antena. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{grafo_8h_a59a62882be97d2e4daf143a5585b10af}{bfs}} (\mbox{\hyperlink{structgrafo}{Grafo}} \texorpdfstring{$\ast$}{*}g, int start\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Inicia a procura em largura (BFS) a partir de uma antena. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{grafo_8h_a3aa60bd76c822db53ccc812f1707e0b5}{listar\+Caminhos}} (\mbox{\hyperlink{structgrafo}{Grafo}} \texorpdfstring{$\ast$}{*}g, int origem, int destino)
+\begin{DoxyCompactList}\small\item\em Lista todos os caminhos possíveis entre duas antenas com a mesma frequência. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Daniel Vilaça (\href{mailto:a16939@alunos.ipca.pt}{\texttt{ a16939@alunos.\+ipca.\+pt}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/05-\/18
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{grafo_8h_a66d9d6385ec027346ffc2c39ad307ad4}\index{grafo.h@{grafo.h}!adicionaAresta@{adicionaAresta}}
+\index{adicionaAresta@{adicionaAresta}!grafo.h@{grafo.h}}
+\doxysubsubsection{\texorpdfstring{adicionaAresta()}{adicionaAresta()}}
+{\footnotesize\ttfamily \label{grafo_8h_a66d9d6385ec027346ffc2c39ad307ad4} 
+void adiciona\+Aresta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{orig}{, }\item[{int}]{dest}{}\end{DoxyParamCaption})}
+
+
+
+Adiciona uma aresta bidirecional entre dois vértices com a mesma frequência. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Apontador para o grafo \\
+\hline
+{\em orig} & Vértice de origem \\
+\hline
+{\em dest} & Vértice de destino \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{grafo_8h_a66d9d6385ec027346ffc2c39ad307ad4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafo_8h_ad0e922e8998db2ce1b829ee52ed583a7}\index{grafo.h@{grafo.h}!adicionaVertice@{adicionaVertice}}
+\index{adicionaVertice@{adicionaVertice}!grafo.h@{grafo.h}}
+\doxysubsubsection{\texorpdfstring{adicionaVertice()}{adicionaVertice()}}
+{\footnotesize\ttfamily \label{grafo_8h_ad0e922e8998db2ce1b829ee52ed583a7} 
+int adiciona\+Vertice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{char}]{freq}{}\end{DoxyParamCaption})}
+
+
+
+Adiciona uma nova antena (vértice) ao grafo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Apontador para o grafo \\
+\hline
+{\em x} & Coordenada x da antena \\
+\hline
+{\em y} & Coordenada y da antena \\
+\hline
+{\em freq} & Frequência de ressonância da antena \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ID atribuído ao novo vértice ou -\/1 se o grafo estiver cheio 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{grafo_8h_ad0e922e8998db2ce1b829ee52ed583a7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafo_8h_a59a62882be97d2e4daf143a5585b10af}\index{grafo.h@{grafo.h}!bfs@{bfs}}
+\index{bfs@{bfs}!grafo.h@{grafo.h}}
+\doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
+{\footnotesize\ttfamily \label{grafo_8h_a59a62882be97d2e4daf143a5585b10af} 
+void bfs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{start\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Inicia a procura em largura (BFS) a partir de uma antena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Apontador \\
+\hline
+{\em start\+\_\+id} & Antena de partida \\
+\hline
+\end{DoxyParams}
+\Hypertarget{grafo_8h_a562457b89adc87f2389c61373499fd83}\index{grafo.h@{grafo.h}!dfs@{dfs}}
+\index{dfs@{dfs}!grafo.h@{grafo.h}}
+\doxysubsubsection{\texorpdfstring{dfs()}{dfs()}}
+{\footnotesize\ttfamily \label{grafo_8h_a562457b89adc87f2389c61373499fd83} 
+void dfs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{start\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Inicia a procura em profundidade (DFS) a partir de uma antena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Apontador \\
+\hline
+{\em start\+\_\+id} & Antena de partida \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{grafo_8h_a562457b89adc87f2389c61373499fd83_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafo_8h_a4260eaefd00a66631206e5743ae47b88}\index{grafo.h@{grafo.h}!imprimeGrafo@{imprimeGrafo}}
+\index{imprimeGrafo@{imprimeGrafo}!grafo.h@{grafo.h}}
+\doxysubsubsection{\texorpdfstring{imprimeGrafo()}{imprimeGrafo()}}
+{\footnotesize\ttfamily \label{grafo_8h_a4260eaefd00a66631206e5743ae47b88} 
+void imprime\+Grafo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+
+
+Imprime todos os vértices do grafo e as suas ligações (arestas) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Apontador \\
+\hline
+\end{DoxyParams}
+\Hypertarget{grafo_8h_a41f43196384519bc86cedaa2add15902}\index{grafo.h@{grafo.h}!inicializaGrafo@{inicializaGrafo}}
+\index{inicializaGrafo@{inicializaGrafo}!grafo.h@{grafo.h}}
+\doxysubsubsection{\texorpdfstring{inicializaGrafo()}{inicializaGrafo()}}
+{\footnotesize\ttfamily \label{grafo_8h_a41f43196384519bc86cedaa2add15902} 
+void inicializa\+Grafo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+
+
+Inicializa o grafo (número de vértices) a 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{grafo_8h_a3aa60bd76c822db53ccc812f1707e0b5}\index{grafo.h@{grafo.h}!listarCaminhos@{listarCaminhos}}
+\index{listarCaminhos@{listarCaminhos}!grafo.h@{grafo.h}}
+\doxysubsubsection{\texorpdfstring{listarCaminhos()}{listarCaminhos()}}
+{\footnotesize\ttfamily \label{grafo_8h_a3aa60bd76c822db53ccc812f1707e0b5} 
+void listar\+Caminhos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{origem}{, }\item[{int}]{destino}{}\end{DoxyParamCaption})}
+
+
+
+Lista todos os caminhos possíveis entre duas antenas com a mesma frequência. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Apontador \\
+\hline
+{\em origem} & Antena de origem \\
+\hline
+{\em destino} & Antena de destino \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{grafo_8h_a3aa60bd76c822db53ccc812f1707e0b5_cgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structvertice" kind="struct" language="C++" prot="public">
+    <compoundname>vertice</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvertice_1a272620fb2a8c43685ae5e8aa8ed2d474" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vertice::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>vertice::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="grafo.h" line="24" column="9" bodyfile="grafo.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvertice_1a2312af36cc1811412affd620f89f39f9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vertice::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>vertice::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="grafo.h" line="25" column="9" bodyfile="grafo.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvertice_1a31931be8cc52bce06abf7a990569dc7f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vertice::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>vertice::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="grafo.h" line="25" column="11" bodyfile="grafo.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvertice_1a61158d3b9accd96f23a9e45901f4219f" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char vertice::freq</definition>
+        <argsstring></argsstring>
+        <name>freq</name>
+        <qualifiedname>vertice::freq</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="grafo.h" line="26" column="10" bodyfile="grafo.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvertice_1acce6174a7ae355d6d8c3de9bae9862c3" prot="public" static="no" mutable="no">
+        <type><ref refid="structadj" kindref="compound">Adj</ref> *</type>
+        <definition>Adj* vertice::lista</definition>
+        <argsstring></argsstring>
+        <name>lista</name>
+        <qualifiedname>vertice::lista</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="grafo.h" line="27" column="9" bodyfile="grafo.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>adj</label>
+        <link refid="structadj"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>prox</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>vertice</label>
+        <link refid="structvertice"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>lista</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="grafo.h" line="23" column="1" bodyfile="grafo.h" bodystart="23" bodyend="28"/>
+    <listofallmembers>
+      <member refid="structvertice_1a61158d3b9accd96f23a9e45901f4219f" prot="public" virt="non-virtual"><scope>vertice</scope><name>freq</name></member>
+      <member refid="structvertice_1a272620fb2a8c43685ae5e8aa8ed2d474" prot="public" virt="non-virtual"><scope>vertice</scope><name>id</name></member>
+      <member refid="structvertice_1acce6174a7ae355d6d8c3de9bae9862c3" prot="public" virt="non-virtual"><scope>vertice</scope><name>lista</name></member>
+      <member refid="structvertice_1a2312af36cc1811412affd620f89f39f9" prot="public" virt="non-virtual"><scope>vertice</scope><name>x</name></member>
+      <member refid="structvertice_1a31931be8cc52bce06abf7a990569dc7f" prot="public" virt="non-virtual"><scope>vertice</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

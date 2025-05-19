@@ -1,6 +1,22 @@
+/**
+ * @file utils.c
+ * @author Daniel Vilaça (a16939@alunos.ipca.pt)
+ * @brief
+ * @version 1.0
+ * @date 2025-05-18
+ *
+ * @copyright Copyright (c) 2025
+ *
+ */
+
+
 #include <stdio.h>
 #include "utils.h"
 
+/// @brief Lê uma matriz de antenas a partir do ficheiro de texto e constrói o grafo
+/// @param filename Nome do ficheiro da matriz de antenas
+/// @param g Apontador para o grafo a ser preenchido
+/// @return Return 1 se o carregamento for bem-sucedido ou 0 em caso de erro
 int carregarMatrizParaGrafo(const char *filename, Grafo *g) {
     FILE *fp = fopen(filename, "r");
     if (!fp) {

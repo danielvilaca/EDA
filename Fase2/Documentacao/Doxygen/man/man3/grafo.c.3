@@ -1,0 +1,223 @@
+.TH "grafo.c" 3 "Fase2 - EDA" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+grafo.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <stdio\&.h>\fP
+.br
+\fR#include <stdlib\&.h>\fP
+.br
+\fR#include <string\&.h>\fP
+.br
+\fR#include 'grafo\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinicializaGrafo\fP (\fBGrafo\fP *g)"
+.br
+.RI "Inicializa o grafo (número de vértices) a 0\&. "
+.ti -1c
+.RI "int \fBadicionaVertice\fP (\fBGrafo\fP *g, int x, int y, char freq)"
+.br
+.RI "Adiciona uma nova antena (vértice) ao grafo\&. "
+.ti -1c
+.RI "void \fBadicionaAresta\fP (\fBGrafo\fP *g, int orig, int dest)"
+.br
+.RI "Adiciona uma aresta bidirecional entre dois vértices com a mesma frequência\&. "
+.ti -1c
+.RI "void \fBimprimeGrafo\fP (\fBGrafo\fP *g)"
+.br
+.RI "Imprime todos os vértices do grafo e as suas ligações (arestas) "
+.ti -1c
+.RI "void \fBdfs_visit\fP (\fBGrafo\fP *g, int id, int *visitado)"
+.br
+.RI "Função auxiliar recursiva para DFS\&. Visita os vértices ligados ao atual\&. "
+.ti -1c
+.RI "void \fBdfs\fP (\fBGrafo\fP *g, int start_id)"
+.br
+.RI "Inicia a procura em profundidade (DFS) a partir de uma antena\&. "
+.ti -1c
+.RI "void \fBbfs\fP (\fBGrafo\fP *g, int start_id)"
+.br
+.RI "Inicia a procura em largura (BFS) a partir de uma antena\&. "
+.ti -1c
+.RI "void \fBlistarCaminhosAux\fP (\fBGrafo\fP *g, int atual, int destino, int *visitado, int *path, int path_len)"
+.br
+.RI "Função recursiva auxiliar para listar todos os caminhos entre duas antenas\&. "
+.ti -1c
+.RI "void \fBlistarCaminhos\fP (\fBGrafo\fP *g, int origem, int destino)"
+.br
+.RI "Lista todos os caminhos possíveis entre duas antenas com a mesma frequência\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+Daniel Vilaça (a16939@alunos.ipca.pt) 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+2025-05-18
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+Copyright (c) 2025 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void adicionaAresta (\fBGrafo\fP * g, int orig, int dest)"
+
+.PP
+Adiciona uma aresta bidirecional entre dois vértices com a mesma frequência\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP Apontador para o grafo 
+.br
+\fIorig\fP Vértice de origem 
+.br
+\fIdest\fP Vértice de destino 
+.RE
+.PP
+
+.SS "int adicionaVertice (\fBGrafo\fP * g, int x, int y, char freq)"
+
+.PP
+Adiciona uma nova antena (vértice) ao grafo\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP Apontador para o grafo 
+.br
+\fIx\fP Coordenada x da antena 
+.br
+\fIy\fP Coordenada y da antena 
+.br
+\fIfreq\fP Frequência de ressonância da antena 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ID atribuído ao novo vértice ou -1 se o grafo estiver cheio 
+.RE
+.PP
+
+.SS "void bfs (\fBGrafo\fP * g, int start_id)"
+
+.PP
+Inicia a procura em largura (BFS) a partir de uma antena\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP Apontador 
+.br
+\fIstart_id\fP Antena de partida 
+.RE
+.PP
+
+.SS "void dfs (\fBGrafo\fP * g, int start_id)"
+
+.PP
+Inicia a procura em profundidade (DFS) a partir de uma antena\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP Apontador 
+.br
+\fIstart_id\fP Antena de partida 
+.RE
+.PP
+
+.SS "void dfs_visit (\fBGrafo\fP * g, int id, int * visitado)"
+
+.PP
+Função auxiliar recursiva para DFS\&. Visita os vértices ligados ao atual\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP Apontador 
+.br
+\fIid\fP Vértice atual 
+.br
+\fIvisitado\fP Array de vértices já visitados 
+.RE
+.PP
+
+.SS "void imprimeGrafo (\fBGrafo\fP * g)"
+
+.PP
+Imprime todos os vértices do grafo e as suas ligações (arestas) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP Apontador 
+.RE
+.PP
+
+.SS "void inicializaGrafo (\fBGrafo\fP * g)"
+
+.PP
+Inicializa o grafo (número de vértices) a 0\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP 
+.RE
+.PP
+
+.SS "void listarCaminhos (\fBGrafo\fP * g, int origem, int destino)"
+
+.PP
+Lista todos os caminhos possíveis entre duas antenas com a mesma frequência\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP Apontador 
+.br
+\fIorigem\fP Antena de origem 
+.br
+\fIdestino\fP Antena de destino 
+.RE
+.PP
+
+.SS "void listarCaminhosAux (\fBGrafo\fP * g, int atual, int destino, int * visitado, int * path, int path_len)"
+
+.PP
+Função recursiva auxiliar para listar todos os caminhos entre duas antenas\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP Apontador 
+.br
+\fIatual\fP Vértice atual 
+.br
+\fIdestino\fP Vértice de destino 
+.br
+\fIvisitado\fP Array de vértices já visitados 
+.br
+\fIpath\fP Array com o caminho atual 
+.br
+\fIpath_len\fP Comprimento atual do caminho 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Fase2 - EDA from the source code\&.

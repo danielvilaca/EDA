@@ -1,0 +1,7 @@
+<map id="carregarMatrizParaGrafo" name="carregarMatrizParaGrafo">
+<area shape="rect" id="Node000001" title="Lê uma matriz de antenas a partir do ficheiro de texto e constrói o grafo." alt="" coords="5,31,169,57"/>
+<area shape="rect" id="Node000002" href="$grafo_8c.html#a66d9d6385ec027346ffc2c39ad307ad4" title="Adiciona uma aresta bidirecional entre dois vértices com a mesma frequência." alt="" coords="218,5,325,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,30,202,25,203,31,169,35"/>
+<area shape="rect" id="Node000003" href="$grafo_8c.html#ad0e922e8998db2ce1b829ee52ed583a7" title="Adiciona uma nova antena (vértice) ao grafo." alt="" coords="217,56,326,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,53,201,57,201,62,169,58"/>
+</map>

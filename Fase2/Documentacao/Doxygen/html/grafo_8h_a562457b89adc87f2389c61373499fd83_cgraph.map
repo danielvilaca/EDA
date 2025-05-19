@@ -1,0 +1,6 @@
+<map id="dfs" name="dfs">
+<area shape="rect" id="Node000001" title="Inicia a procura em profundidade (DFS) a partir de uma antena." alt="" coords="5,29,45,56"/>
+<area shape="rect" id="Node000002" href="$grafo_8c.html#a9d360aab7800fed0523977436f7d689b" title="Função auxiliar recursiva para DFS. Visita os vértices ligados ao atual." alt="" coords="93,29,163,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,40,77,40,77,45,45,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="109,30,106,20,108,11,116,5,128,3,141,5,148,12,144,16,138,10,128,8,118,10,113,14,111,20,114,28"/>
+</map>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structadj" xml:lang="en-US">
+<title>adj Struct Reference</title>
+<indexterm><primary>adj</primary></indexterm>
+Collaboration diagram for adj:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structadj__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_structadj_1aba3f1ed3cfde575d5df2ef73257f05c7"/>int <emphasis role="strong">dest</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structadj_1a69bb00e4cc274690297b61d3c473cb6e"/>struct <link linkend="_structadj">adj</link> * <emphasis role="strong">prox</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following file:</para>
+<link linkend="_grafo_8h">grafo.h</link></section>

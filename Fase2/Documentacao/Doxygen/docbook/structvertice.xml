@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structvertice" xml:lang="en-US">
+<title>vertice Struct Reference</title>
+<indexterm><primary>vertice</primary></indexterm>
+Collaboration diagram for vertice:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structvertice__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_structvertice_1a272620fb2a8c43685ae5e8aa8ed2d474"/>int <emphasis role="strong">id</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structvertice_1a2312af36cc1811412affd620f89f39f9"/>int <emphasis role="strong">x</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structvertice_1a31931be8cc52bce06abf7a990569dc7f"/>int <emphasis role="strong">y</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structvertice_1a61158d3b9accd96f23a9e45901f4219f"/>char <emphasis role="strong">freq</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structvertice_1acce6174a7ae355d6d8c3de9bae9862c3"/><link linkend="_structadj">Adj</link> * <emphasis role="strong">lista</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following file:</para>
+<link linkend="_grafo_8h">grafo.h</link></section>

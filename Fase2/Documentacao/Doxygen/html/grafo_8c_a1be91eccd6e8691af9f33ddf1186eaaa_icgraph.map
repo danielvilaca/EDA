@@ -1,0 +1,6 @@
+<map id="listarCaminhosAux" name="listarCaminhosAux">
+<area shape="rect" id="Node000001" title="Função recursiva auxiliar para listar todos os caminhos entre duas antenas." alt="" coords="162,29,293,56"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="256,16,246,10,227,8,210,10,201,15,199,20,203,28,198,30,193,21,197,11,208,5,227,3,248,5,258,12"/>
+<area shape="rect" id="Node000002" href="$grafo_8c.html#a3aa60bd76c822db53ccc812f1707e0b5" title="Lista todos os caminhos possíveis entre duas antenas com a mesma frequência." alt="" coords="5,29,114,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,45,114,45,114,40,146,40"/>
+</map>

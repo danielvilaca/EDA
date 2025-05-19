@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_utils_8h_source" xml:lang="en-US">
+<title>utils.h</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+11 
+12 
+13 <emphasis role="preprocessor">#ifndef&#32;UTILS_H</emphasis>
+14 <emphasis role="preprocessor">#define&#32;UTILS_H</emphasis>
+15 
+16 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_grafo_8h">grafo.h</link>&quot;</emphasis>
+17 
+18 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_utils_8h_1a0f84e909753715499c399befc6f62e4e">carregarMatrizParaGrafo</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*filename,&#32;Grafo&#32;*g);
+19 
+20 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

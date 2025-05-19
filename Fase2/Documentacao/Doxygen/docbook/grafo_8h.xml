@@ -1,0 +1,402 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_grafo_8h" xml:lang="en-US">
+<title>grafo.h File Reference</title>
+<indexterm><primary>grafo.h</primary></indexterm>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="grafo_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structadj">adj</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structvertice">vertice</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structgrafo">grafo</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_grafo_8h_1a0fdb7b933ef091574ff57d1f36dd4167"/>#define <emphasis role="strong">MAX_VERTICES</emphasis>&#160;&#160;&#160;100</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_grafo_8h_1aa4e42d74420121b5a48e89648fcbf905"/>typedef struct <link linkend="_structadj">adj</link> <emphasis role="strong">Adj</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_grafo_8h_1a0eeaefc2bfc9ba935d96fc375f3b11fa"/>typedef struct <link linkend="_structvertice">vertice</link> <emphasis role="strong">Vertice</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_grafo_8h_1ad2ceaa7fd9c9bab870e4fd852607631a"/>typedef struct <link linkend="_structgrafo">grafo</link> <emphasis role="strong">Grafo</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_grafo_8h_1a41f43196384519bc86cedaa2add15902">inicializaGrafo</link> (<link linkend="_structgrafo">Grafo</link> *g)</para>
+
+<para>Inicializa o grafo (número de vértices) a 0. </para>
+</listitem>
+            <listitem><para>int <link linkend="_grafo_8h_1ad0e922e8998db2ce1b829ee52ed583a7">adicionaVertice</link> (<link linkend="_structgrafo">Grafo</link> *g, int x, int y, char freq)</para>
+
+<para>Adiciona uma nova antena (vértice) ao grafo. </para>
+</listitem>
+            <listitem><para>void <link linkend="_grafo_8h_1a66d9d6385ec027346ffc2c39ad307ad4">adicionaAresta</link> (<link linkend="_structgrafo">Grafo</link> *g, int orig, int dest)</para>
+
+<para>Adiciona uma aresta bidirecional entre dois vértices com a mesma frequência. </para>
+</listitem>
+            <listitem><para>void <link linkend="_grafo_8h_1a4260eaefd00a66631206e5743ae47b88">imprimeGrafo</link> (<link linkend="_structgrafo">Grafo</link> *g)</para>
+
+<para>Imprime todos os vértices do grafo e as suas ligações (arestas) </para>
+</listitem>
+            <listitem><para>void <link linkend="_grafo_8h_1a562457b89adc87f2389c61373499fd83">dfs</link> (<link linkend="_structgrafo">Grafo</link> *g, int start_id)</para>
+
+<para>Inicia a procura em profundidade (DFS) a partir de uma antena. </para>
+</listitem>
+            <listitem><para>void <link linkend="_grafo_8h_1a59a62882be97d2e4daf143a5585b10af">bfs</link> (<link linkend="_structgrafo">Grafo</link> *g, int start_id)</para>
+
+<para>Inicia a procura em largura (BFS) a partir de uma antena. </para>
+</listitem>
+            <listitem><para>void <link linkend="_grafo_8h_1a3aa60bd76c822db53ccc812f1707e0b5">listarCaminhos</link> (<link linkend="_structgrafo">Grafo</link> *g, int origem, int destino)</para>
+
+<para>Lista todos os caminhos possíveis entre duas antenas com a mesma frequência. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><formalpara><title>Author</title>
+
+<para>Daniel Vilaça (<link xlink:href="mailto:a16939@alunos.ipca.pt">a16939@alunos.ipca.pt</link>) </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>2025-05-18</para>
+</formalpara>
+<formalpara><title>Copyright</title>
+
+<para>Copyright (c) 2025 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_grafo_8h_1a66d9d6385ec027346ffc2c39ad307ad4"/><section>
+    <title>adicionaAresta()</title>
+<indexterm><primary>adicionaAresta</primary><secondary>grafo.h</secondary></indexterm>
+<indexterm><primary>grafo.h</primary><secondary>adicionaAresta</secondary></indexterm>
+<para><computeroutput>void adicionaAresta (<link linkend="_structgrafo">Grafo</link> * g, int orig, int dest)</computeroutput></para><para>
+
+<para>Adiciona uma aresta bidirecional entre dois vértices com a mesma frequência. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>g</entry><entry>
+<para>Apontador para o grafo </para>
+</entry>
+                            </row>
+                            <row>
+<entry>orig</entry><entry>
+<para>Vértice de origem </para>
+</entry>
+                            </row>
+                            <row>
+<entry>dest</entry><entry>
+<para>Vértice de destino </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="grafo_8h_a66d9d6385ec027346ffc2c39ad307ad4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_grafo_8h_1ad0e922e8998db2ce1b829ee52ed583a7"/><section>
+    <title>adicionaVertice()</title>
+<indexterm><primary>adicionaVertice</primary><secondary>grafo.h</secondary></indexterm>
+<indexterm><primary>grafo.h</primary><secondary>adicionaVertice</secondary></indexterm>
+<para><computeroutput>int adicionaVertice (<link linkend="_structgrafo">Grafo</link> * g, int x, int y, char freq)</computeroutput></para><para>
+
+<para>Adiciona uma nova antena (vértice) ao grafo. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>g</entry><entry>
+<para>Apontador para o grafo </para>
+</entry>
+                            </row>
+                            <row>
+<entry>x</entry><entry>
+<para>Coordenada x da antena </para>
+</entry>
+                            </row>
+                            <row>
+<entry>y</entry><entry>
+<para>Coordenada y da antena </para>
+</entry>
+                            </row>
+                            <row>
+<entry>freq</entry><entry>
+<para>Frequência de ressonância da antena </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>ID atribuído ao novo vértice ou -1 se o grafo estiver cheio </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="grafo_8h_ad0e922e8998db2ce1b829ee52ed583a7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_grafo_8h_1a59a62882be97d2e4daf143a5585b10af"/><section>
+    <title>bfs()</title>
+<indexterm><primary>bfs</primary><secondary>grafo.h</secondary></indexterm>
+<indexterm><primary>grafo.h</primary><secondary>bfs</secondary></indexterm>
+<para><computeroutput>void bfs (<link linkend="_structgrafo">Grafo</link> * g, int start_id)</computeroutput></para><para>
+
+<para>Inicia a procura em largura (BFS) a partir de uma antena. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>g</entry><entry>
+<para>Apontador </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start_id</entry><entry>
+<para>Antena de partida </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_grafo_8h_1a562457b89adc87f2389c61373499fd83"/><section>
+    <title>dfs()</title>
+<indexterm><primary>dfs</primary><secondary>grafo.h</secondary></indexterm>
+<indexterm><primary>grafo.h</primary><secondary>dfs</secondary></indexterm>
+<para><computeroutput>void dfs (<link linkend="_structgrafo">Grafo</link> * g, int start_id)</computeroutput></para><para>
+
+<para>Inicia a procura em profundidade (DFS) a partir de uma antena. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>g</entry><entry>
+<para>Apontador </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start_id</entry><entry>
+<para>Antena de partida </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="grafo_8h_a562457b89adc87f2389c61373499fd83_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_grafo_8h_1a4260eaefd00a66631206e5743ae47b88"/><section>
+    <title>imprimeGrafo()</title>
+<indexterm><primary>imprimeGrafo</primary><secondary>grafo.h</secondary></indexterm>
+<indexterm><primary>grafo.h</primary><secondary>imprimeGrafo</secondary></indexterm>
+<para><computeroutput>void imprimeGrafo (<link linkend="_structgrafo">Grafo</link> * g)</computeroutput></para><para>
+
+<para>Imprime todos os vértices do grafo e as suas ligações (arestas) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>g</entry><entry>
+<para>Apontador </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_grafo_8h_1a41f43196384519bc86cedaa2add15902"/><section>
+    <title>inicializaGrafo()</title>
+<indexterm><primary>inicializaGrafo</primary><secondary>grafo.h</secondary></indexterm>
+<indexterm><primary>grafo.h</primary><secondary>inicializaGrafo</secondary></indexterm>
+<para><computeroutput>void inicializaGrafo (<link linkend="_structgrafo">Grafo</link> * g)</computeroutput></para><para>
+
+<para>Inicializa o grafo (número de vértices) a 0. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>g</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_grafo_8h_1a3aa60bd76c822db53ccc812f1707e0b5"/><section>
+    <title>listarCaminhos()</title>
+<indexterm><primary>listarCaminhos</primary><secondary>grafo.h</secondary></indexterm>
+<indexterm><primary>grafo.h</primary><secondary>listarCaminhos</secondary></indexterm>
+<para><computeroutput>void listarCaminhos (<link linkend="_structgrafo">Grafo</link> * g, int origem, int destino)</computeroutput></para><para>
+
+<para>Lista todos os caminhos possíveis entre duas antenas com a mesma frequência. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>g</entry><entry>
+<para>Apontador </para>
+</entry>
+                            </row>
+                            <row>
+<entry>origem</entry><entry>
+<para>Antena de origem </para>
+</entry>
+                            </row>
+                            <row>
+<entry>destino</entry><entry>
+<para>Antena de destino </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="grafo_8h_a3aa60bd76c822db53ccc812f1707e0b5_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

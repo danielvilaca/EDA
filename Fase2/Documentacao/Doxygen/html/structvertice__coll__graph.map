@@ -1,0 +1,6 @@
+<map id="vertice" name="vertice">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,96,66,123"/>
+<area shape="rect" id="Node000002" href="$structadj.html" title=" " alt="" coords="16,5,55,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="38,48,38,95,33,95,33,48"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="71,9,78,12,81,19,72,28,55,29,55,24,70,24,76,18,74,16,69,13"/>
+</map>

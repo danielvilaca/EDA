@@ -1,3 +1,15 @@
+/**
+ * @file main.c
+ * @author Daniel Vilaça (a16939@alunos.ipca.pt)
+ * @brief
+ * @version 1.0
+ * @date 2025-05-18
+ *
+ * @copyright Copyright (c) 2025
+ *
+ */
+
+
 #include <stdio.h>
 #include "grafo.h"
 #include "utils.h"

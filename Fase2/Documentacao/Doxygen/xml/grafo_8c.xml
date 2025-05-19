@@ -1,0 +1,670 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="grafo_8c" kind="file" language="C++">
+    <compoundname>grafo.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes refid="grafo_8h" local="yes">grafo.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>grafo.c</label>
+        <link refid="grafo_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>grafo.h</label>
+        <link refid="grafo_8h"/>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="grafo_8c_1a41f43196384519bc86cedaa2add15902" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void inicializaGrafo</definition>
+        <argsstring>(Grafo *g)</argsstring>
+        <name>inicializaGrafo</name>
+        <param>
+          <type><ref refid="structgrafo" kindref="compound">Grafo</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+<para>Inicializa o grafo (número de vértices) a 0. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="grafo.c" line="21" column="6" bodyfile="grafo.c" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="grafo_8c_1ad0e922e8998db2ce1b829ee52ed583a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int adicionaVertice</definition>
+        <argsstring>(Grafo *g, int x, int y, char freq)</argsstring>
+        <name>adicionaVertice</name>
+        <param>
+          <type><ref refid="structgrafo" kindref="compound">Grafo</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>freq</declname>
+        </param>
+        <briefdescription>
+<para>Adiciona uma nova antena (vértice) ao grafo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordenada x da antena </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordenada y da antena </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frequência de ressonância da antena </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ID atribuído ao novo vértice ou -1 se o grafo estiver cheio </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="grafo.c" line="31" column="5" bodyfile="grafo.c" bodystart="31" bodyend="41"/>
+        <referencedby refid="utils_8c_1a0f84e909753715499c399befc6f62e4e" compoundref="utils_8c" startline="20" endline="49">carregarMatrizParaGrafo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="grafo_8c_1a66d9d6385ec027346ffc2c39ad307ad4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void adicionaAresta</definition>
+        <argsstring>(Grafo *g, int orig, int dest)</argsstring>
+        <name>adicionaAresta</name>
+        <param>
+          <type><ref refid="structgrafo" kindref="compound">Grafo</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>orig</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+<para>Adiciona uma aresta bidirecional entre dois vértices com a mesma frequência. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>orig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vértice de origem </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vértice de destino </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="grafo.c" line="47" column="6" bodyfile="grafo.c" bodystart="47" bodyend="61"/>
+        <referencedby refid="utils_8c_1a0f84e909753715499c399befc6f62e4e" compoundref="utils_8c" startline="20" endline="49">carregarMatrizParaGrafo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="grafo_8c_1a4260eaefd00a66631206e5743ae47b88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void imprimeGrafo</definition>
+        <argsstring>(Grafo *g)</argsstring>
+        <name>imprimeGrafo</name>
+        <param>
+          <type><ref refid="structgrafo" kindref="compound">Grafo</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+<para>Imprime todos os vértices do grafo e as suas ligações (arestas) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="grafo.c" line="65" column="6" bodyfile="grafo.c" bodystart="65" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="grafo_8c_1a9d360aab7800fed0523977436f7d689b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dfs_visit</definition>
+        <argsstring>(Grafo *g, int id, int *visitado)</argsstring>
+        <name>dfs_visit</name>
+        <param>
+          <type><ref refid="structgrafo" kindref="compound">Grafo</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>visitado</declname>
+        </param>
+        <briefdescription>
+<para>Função auxiliar recursiva para DFS. Visita os vértices ligados ao atual. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vértice atual </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>visitado</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array de vértices já visitados </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="grafo.c" line="81" column="6" bodyfile="grafo.c" bodystart="81" bodyend="96"/>
+        <references refid="grafo_8c_1a9d360aab7800fed0523977436f7d689b" compoundref="grafo_8c" startline="81" endline="96">dfs_visit</references>
+        <referencedby refid="grafo_8c_1a562457b89adc87f2389c61373499fd83" compoundref="grafo_8c" startline="101" endline="110">dfs</referencedby>
+        <referencedby refid="grafo_8c_1a9d360aab7800fed0523977436f7d689b" compoundref="grafo_8c" startline="81" endline="96">dfs_visit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="grafo_8c_1a562457b89adc87f2389c61373499fd83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dfs</definition>
+        <argsstring>(Grafo *g, int start_id)</argsstring>
+        <name>dfs</name>
+        <param>
+          <type><ref refid="structgrafo" kindref="compound">Grafo</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_id</declname>
+        </param>
+        <briefdescription>
+<para>Inicia a procura em profundidade (DFS) a partir de uma antena. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Antena de partida </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="grafo.c" line="101" column="6" bodyfile="grafo.c" bodystart="101" bodyend="110"/>
+        <references refid="grafo_8c_1a9d360aab7800fed0523977436f7d689b" compoundref="grafo_8c" startline="81" endline="96">dfs_visit</references>
+      </memberdef>
+      <memberdef kind="function" id="grafo_8c_1a59a62882be97d2e4daf143a5585b10af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bfs</definition>
+        <argsstring>(Grafo *g, int start_id)</argsstring>
+        <name>bfs</name>
+        <param>
+          <type><ref refid="structgrafo" kindref="compound">Grafo</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_id</declname>
+        </param>
+        <briefdescription>
+<para>Inicia a procura em largura (BFS) a partir de uma antena. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Antena de partida </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="grafo.c" line="115" column="6" bodyfile="grafo.c" bodystart="115" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="grafo_8c_1a1be91eccd6e8691af9f33ddf1186eaaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void listarCaminhosAux</definition>
+        <argsstring>(Grafo *g, int atual, int destino, int *visitado, int *path, int path_len)</argsstring>
+        <name>listarCaminhosAux</name>
+        <param>
+          <type><ref refid="structgrafo" kindref="compound">Grafo</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>atual</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>destino</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>visitado</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>path_len</declname>
+        </param>
+        <briefdescription>
+<para>Função recursiva auxiliar para listar todos os caminhos entre duas antenas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>atual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vértice atual </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destino</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vértice de destino </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>visitado</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array de vértices já visitados </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array com o caminho atual </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Comprimento atual do caminho </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="grafo.c" line="156" column="6" bodyfile="grafo.c" bodystart="156" bodyend="182"/>
+        <references refid="grafo_8c_1a1be91eccd6e8691af9f33ddf1186eaaa" compoundref="grafo_8c" startline="156" endline="182">listarCaminhosAux</references>
+        <referencedby refid="grafo_8c_1a3aa60bd76c822db53ccc812f1707e0b5" compoundref="grafo_8c" startline="188" endline="203">listarCaminhos</referencedby>
+        <referencedby refid="grafo_8c_1a1be91eccd6e8691af9f33ddf1186eaaa" compoundref="grafo_8c" startline="156" endline="182">listarCaminhosAux</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="grafo_8c_1a3aa60bd76c822db53ccc812f1707e0b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void listarCaminhos</definition>
+        <argsstring>(Grafo *g, int origem, int destino)</argsstring>
+        <name>listarCaminhos</name>
+        <param>
+          <type><ref refid="structgrafo" kindref="compound">Grafo</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>origem</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>destino</declname>
+        </param>
+        <briefdescription>
+<para>Lista todos os caminhos possíveis entre duas antenas com a mesma frequência. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>origem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Antena de origem </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destino</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Antena de destino </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="grafo.c" line="188" column="6" bodyfile="grafo.c" bodystart="188" bodyend="203"/>
+        <references refid="grafo_8c_1a1be91eccd6e8691af9f33ddf1186eaaa" compoundref="grafo_8c" startline="156" endline="182">listarCaminhosAux</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Daniel Vilaça (<ulink url="mailto:a16939@alunos.ipca.pt">a16939@alunos.ipca.pt</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+<simplesect kind="date"><para>2025-05-18</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="grafo_8h" kindref="compound">grafo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="grafo_8c_1a41f43196384519bc86cedaa2add15902" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="grafo_8c_1a41f43196384519bc86cedaa2add15902" kindref="member">inicializaGrafo</ref>(Grafo<sp/>*g)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;n_vertices<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="grafo_8c_1ad0e922e8998db2ce1b829ee52ed583a7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="grafo_8c_1ad0e922e8998db2ce1b829ee52ed583a7" kindref="member">adicionaVertice</ref>(Grafo<sp/>*g,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>freq)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g-&gt;n_vertices<sp/>&gt;=<sp/>MAX_VERTICES)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>g-&gt;n_vertices;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;vertices[id].id<sp/>=<sp/>id;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;vertices[id].x<sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;vertices[id].y<sp/>=<sp/>y;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;vertices[id].freq<sp/>=<sp/>freq;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;vertices[id].lista<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;n_vertices++;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>id;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="grafo_8c_1a66d9d6385ec027346ffc2c39ad307ad4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="grafo_8c_1a66d9d6385ec027346ffc2c39ad307ad4" kindref="member">adicionaAresta</ref>(Grafo<sp/>*g,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>orig,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dest)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(orig<sp/>&lt;<sp/>0<sp/>||<sp/>dest<sp/>&lt;<sp/>0<sp/>||<sp/>orig<sp/>&gt;=<sp/>g-&gt;n_vertices<sp/>||<sp/>dest<sp/>&gt;=<sp/>g-&gt;n_vertices)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g-&gt;vertices[orig].freq<sp/>!=<sp/>g-&gt;vertices[dest].freq)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>Adj<sp/>*nova<sp/>=<sp/>(Adj<sp/>*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(Adj));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>nova-&gt;dest<sp/>=<sp/>dest;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>nova-&gt;prox<sp/>=<sp/>g-&gt;vertices[orig].lista;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;vertices[orig].lista<sp/>=<sp/>nova;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Aresta<sp/>bidirecional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>Adj<sp/>*nova2<sp/>=<sp/>(Adj<sp/>*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(Adj));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>nova2-&gt;dest<sp/>=<sp/>orig;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>nova2-&gt;prox<sp/>=<sp/>g-&gt;vertices[dest].lista;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;vertices[dest].lista<sp/>=<sp/>nova2;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="grafo_8c_1a4260eaefd00a66631206e5743ae47b88" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="grafo_8c_1a4260eaefd00a66631206e5743ae47b88" kindref="member">imprimeGrafo</ref>(Grafo<sp/>*g)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>g-&gt;n_vertices;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Antena<sp/>%d<sp/>[%c]<sp/>em<sp/>(%d,%d)<sp/>-&gt;<sp/>&quot;</highlight><highlight class="normal">,<sp/>g-&gt;vertices[i].id,<sp/>g-&gt;vertices[i].freq,<sp/>g-&gt;vertices[i].x,<sp/>g-&gt;vertices[i].y);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Adj<sp/>*aux<sp/>=<sp/>g-&gt;vertices[i].lista;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(aux<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%d<sp/>&quot;</highlight><highlight class="normal">,<sp/>aux-&gt;dest);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aux<sp/>=<sp/>aux-&gt;prox;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="grafo_8c_1a9d360aab7800fed0523977436f7d689b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="grafo_8c_1a9d360aab7800fed0523977436f7d689b" kindref="member">dfs_visit</ref>(Grafo<sp/>*g,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*visitado)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>visitado[id]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Visitado<sp/>DFS:<sp/>Antena<sp/>%d<sp/>[%c]<sp/>em<sp/>(%d,%d)\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g-&gt;vertices[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].id,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g-&gt;vertices[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].freq,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g-&gt;vertices[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].x,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g-&gt;vertices[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].y);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>Adj<sp/>*<ref refid="structadj" kindref="compound">adj</ref><sp/>=<sp/>g-&gt;vertices[id].lista;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="structadj" kindref="compound">adj</ref><sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!visitado[<ref refid="structadj" kindref="compound">adj</ref>-&gt;dest])<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="grafo_8c_1a9d360aab7800fed0523977436f7d689b" kindref="member">dfs_visit</ref>(g,<sp/><ref refid="structadj" kindref="compound">adj</ref>-&gt;dest,<sp/>visitado);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structadj" kindref="compound">adj</ref><sp/>=<sp/><ref refid="structadj" kindref="compound">adj</ref>-&gt;prox;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="grafo_8c_1a562457b89adc87f2389c61373499fd83" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="grafo_8c_1a562457b89adc87f2389c61373499fd83" kindref="member">dfs</ref>(Grafo<sp/>*g,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_id)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(start_id<sp/>&lt;<sp/>0<sp/>||<sp/>start_id<sp/>&gt;=<sp/>g-&gt;n_vertices)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;ID<sp/>inválido.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>visitado[MAX_VERTICES]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;DFS<sp/>a<sp/>partir<sp/>da<sp/>antena<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>start_id);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="grafo_8c_1a9d360aab7800fed0523977436f7d689b" kindref="member">dfs_visit</ref>(g,<sp/>start_id,<sp/>visitado);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="grafo_8c_1a59a62882be97d2e4daf143a5585b10af" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="grafo_8c_1a59a62882be97d2e4daf143a5585b10af" kindref="member">bfs</ref>(Grafo<sp/>*g,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_id)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(start_id<sp/>&lt;<sp/>0<sp/>||<sp/>start_id<sp/>&gt;=<sp/>g-&gt;n_vertices)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;ID<sp/>inválido.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>visitado[MAX_VERTICES]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fila[MAX_VERTICES];</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>inicio<sp/>=<sp/>0,<sp/>fim<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>fila[fim++]<sp/>=<sp/>start_id;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>visitado[start_id]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;BFS<sp/>a<sp/>partir<sp/>da<sp/>antena<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>start_id);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(inicio<sp/>&lt;<sp/>fim)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>atual<sp/>=<sp/>fila[inicio++];</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Visitado<sp/>BFS:<sp/>Antena<sp/>%d<sp/>[%c]<sp/>em<sp/>(%d,%d)\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g-&gt;vertices[atual].id,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g-&gt;vertices[atual].freq,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g-&gt;vertices[atual].x,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g-&gt;vertices[atual].y);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Adj<sp/>*<ref refid="structadj" kindref="compound">adj</ref><sp/>=<sp/>g-&gt;vertices[atual].lista;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="structadj" kindref="compound">adj</ref><sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!visitado[<ref refid="structadj" kindref="compound">adj</ref>-&gt;dest])<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fila[fim++]<sp/>=<sp/><ref refid="structadj" kindref="compound">adj</ref>-&gt;dest;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>visitado[<ref refid="structadj" kindref="compound">adj</ref>-&gt;dest]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structadj" kindref="compound">adj</ref><sp/>=<sp/><ref refid="structadj" kindref="compound">adj</ref>-&gt;prox;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="grafo_8c_1a1be91eccd6e8691af9f33ddf1186eaaa" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="grafo_8c_1a1be91eccd6e8691af9f33ddf1186eaaa" kindref="member">listarCaminhosAux</ref>(Grafo<sp/>*g,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>atual,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>destino,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*visitado,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*path,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>path_len)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>visitado[atual]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>path[path_len++]<sp/>=<sp/>atual;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(atual<sp/>==<sp/>destino)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Caminho:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>path_len;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>path[i];</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%d<sp/>[%c](%d,%d)&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g-&gt;vertices[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].freq,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g-&gt;vertices[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].x,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g-&gt;vertices[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].y);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>&lt;<sp/>path_len<sp/>-<sp/>1)<sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/>-&gt;<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Adj<sp/>*<ref refid="structadj" kindref="compound">adj</ref><sp/>=<sp/>g-&gt;vertices[atual].lista;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="structadj" kindref="compound">adj</ref><sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!visitado[<ref refid="structadj" kindref="compound">adj</ref>-&gt;dest])<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="grafo_8c_1a1be91eccd6e8691af9f33ddf1186eaaa" kindref="member">listarCaminhosAux</ref>(g,<sp/><ref refid="structadj" kindref="compound">adj</ref>-&gt;dest,<sp/>destino,<sp/>visitado,<sp/>path,<sp/>path_len);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structadj" kindref="compound">adj</ref><sp/>=<sp/><ref refid="structadj" kindref="compound">adj</ref>-&gt;prox;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>visitado[atual]<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>backtrack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="grafo_8c_1a3aa60bd76c822db53ccc812f1707e0b5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="grafo_8c_1a3aa60bd76c822db53ccc812f1707e0b5" kindref="member">listarCaminhos</ref>(Grafo<sp/>*g,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>origem,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>destino)<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(origem<sp/>&lt;<sp/>0<sp/>||<sp/>origem<sp/>&gt;=<sp/>g-&gt;n_vertices<sp/>||<sp/>destino<sp/>&lt;<sp/>0<sp/>||<sp/>destino<sp/>&gt;=<sp/>g-&gt;n_vertices)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;ID<sp/>inválido.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g-&gt;vertices[origem].freq<sp/>!=<sp/>g-&gt;vertices[destino].freq)<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Antenas<sp/>com<sp/>frequências<sp/>diferentes<sp/>não<sp/>estão<sp/>ligadas.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>visitado[MAX_VERTICES]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>path[MAX_VERTICES];</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Caminhos<sp/>entre<sp/>%d<sp/>e<sp/>%d:\n&quot;</highlight><highlight class="normal">,<sp/>origem,<sp/>destino);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="grafo_8c_1a1be91eccd6e8691af9f33ddf1186eaaa" kindref="member">listarCaminhosAux</ref>(g,<sp/>origem,<sp/>destino,<sp/>visitado,<sp/>path,<sp/>0);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="grafo.c"/>
+  </compounddef>
+</doxygen>

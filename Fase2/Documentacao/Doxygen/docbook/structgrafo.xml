@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structgrafo" xml:lang="en-US">
+<title>grafo Struct Reference</title>
+<indexterm><primary>grafo</primary></indexterm>
+Collaboration diagram for grafo:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structgrafo__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_structgrafo_1ab11912489fc3c8a0875dff12417fe95a"/>int <emphasis role="strong">n_vertices</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structgrafo_1a98dbb59f21c2cc834513f36fd1844998"/><link linkend="_structvertice">Vertice</link> <emphasis role="strong">vertices</emphasis> [MAX_VERTICES]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following file:</para>
+<link linkend="_grafo_8h">grafo.h</link></section>

@@ -1,0 +1,5 @@
+<map id="adicionaAresta" name="adicionaAresta">
+<area shape="rect" id="Node000001" title="Adiciona uma aresta bidirecional entre dois vértices com a mesma frequência." alt="" coords="217,5,324,32"/>
+<area shape="rect" id="Node000002" href="$utils_8c.html#a0f84e909753715499c399befc6f62e4e" title="Lê uma matriz de antenas a partir do ficheiro de texto e constrói o grafo." alt="" coords="5,5,169,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,21,169,21,169,16,201,16"/>
+</map>

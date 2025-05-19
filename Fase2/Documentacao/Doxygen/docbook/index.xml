@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>Fase2 - EDA</title>
+    </info>
+    <xi:include href="md__r_e_a_d_m_e.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="structadj.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structgrafo.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structvertice.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="grafo_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="grafo_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="grafo_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="main_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="utils_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="utils_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="utils_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>
