@@ -70,7 +70,7 @@ int main() {
                 scanf(" %c", &f1);
                 printf("Introduza a segunda frequencia: ");
                 scanf(" %c", &f2);
-                listarIntersecoes(&g, f1, f2);  // esta continua a ser void
+                listarIntersecoes(&g, f1, f2);
                 break;
             }
             case 0:
