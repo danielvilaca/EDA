@@ -13,6 +13,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 #include "grafo.h"
 
 
@@ -44,21 +45,29 @@ int adicionaVertice(Grafo *g, int x, int y, char freq) {
 /// @param g Apontador para o grafo
 /// @param orig Vértice de origem
 /// @param dest Vértice de destino
-void adicionaAresta(Grafo *g, int orig, int dest) {
-    if (orig < 0 || dest < 0 || orig >= g->n_vertices || dest >= g->n_vertices) return;
-    if (g->vertices[orig].freq != g->vertices[dest].freq) return;
+bool adicionaAresta(Grafo *g, int orig, int dest) {
+    if (orig < 0 || dest < 0 || orig >= g->n_vertices || dest >= g->n_vertices)
+        return false;
+    if (g->vertices[orig].freq != g->vertices[dest].freq)
+        return false;
 
-    Adj *nova = (Adj *)malloc(sizeof(Adj));
+    Adj *nova = malloc(sizeof(Adj));
+    if (!nova) return false;
+
     nova->dest = dest;
     nova->prox = g->vertices[orig].lista;
     g->vertices[orig].lista = nova;
 
-    // Aresta bidirecional
-    Adj *nova2 = (Adj *)malloc(sizeof(Adj));
+    Adj *nova2 = malloc(sizeof(Adj));
+    if (!nova2) return false;
+
     nova2->dest = orig;
     nova2->prox = g->vertices[dest].lista;
     g->vertices[dest].lista = nova2;
+
+    return true;
 }
+
 
 /// @brief Imprime todos os vértices do grafo e as suas ligações (arestas)
 /// @param g Apontador
@@ -98,24 +107,26 @@ void dfs_visit(Grafo *g, int id, int *visitado) {
 /// @brief Inicia a procura em profundidade (DFS) a partir de uma antena
 /// @param g Apontador
 /// @param start_id Antena de partida
-void dfs(Grafo *g, int start_id) {
+bool dfs(Grafo *g, int start_id) {
     if (start_id < 0 || start_id >= g->n_vertices) {
         printf("ID invalido.\n");
-        return;
+        return false;
     }
 
     int visitado[MAX_VERTICES] = {0};
     printf("DFS a partir da antena %d\n", start_id);
     dfs_visit(g, start_id, visitado);
+    return true;
 }
+
 
 /// @brief Inicia a procura em largura (BFS) a partir de uma antena
 /// @param g Apontador
 /// @param start_id Antena de partida
-void bfs(Grafo *g, int start_id) {
+bool bfs(Grafo *g, int start_id) {
     if (start_id < 0 || start_id >= g->n_vertices) {
         printf("ID invalido.\n");
-        return;
+        return false;
     }
 
     int visitado[MAX_VERTICES] = {0};
@@ -144,7 +155,9 @@ void bfs(Grafo *g, int start_id) {
             adj = adj->prox;
         }
     }
+    return true;
 }
+
 
 /// @brief Função recursiva auxiliar para listar todos os caminhos entre duas antenas
 /// @param g Apontador
@@ -153,7 +166,7 @@ void bfs(Grafo *g, int start_id) {
 /// @param visitado Array de vértices já visitados
 /// @param path Array com o caminho atual
 /// @param path_len Comprimento atual do caminho
-void listarCaminhosAux(Grafo *g, int atual, int destino, int *visitado, int *path, int path_len) {
+bool listarCaminhosAux(Grafo *g, int atual, int destino, int *visitado, int *path, int path_len) {
     visitado[atual] = 1;
     path[path_len++] = atual;
 
@@ -185,19 +198,50 @@ void listarCaminhosAux(Grafo *g, int atual, int destino, int *visitado, int *pat
 /// @param g Apontador
 /// @param origem Antena de origem
 /// @param destino Antena de destino
-void listarCaminhos(Grafo *g, int origem, int destino) {
+bool listarCaminhos(Grafo *g, int origem, int destino) {
     if (origem < 0 || origem >= g->n_vertices || destino < 0 || destino >= g->n_vertices) {
         printf("ID invalido.\n");
-        return;
+        return false;
     }
 
     if (g->vertices[origem].freq != g->vertices[destino].freq) {
         printf("Antenas com frequencias diferentes nao estao ligadas.\n");
-        return;
+        return false;
     }
 
     int visitado[MAX_VERTICES] = {0};
     int path[MAX_VERTICES];
     printf("Caminhos entre %d e %d:\n", origem, destino);
     listarCaminhosAux(g, origem, destino, visitado, path, 0);
+    return true;
 }
+
+
+/**
+ * @brief Lista todos os pares de antenas com frequências distintas A e B.
+ *
+ * @param g Apontador para o grafo.
+ * @param freq1 Primeira frequência a considerar.
+ * @param freq2 Segunda frequência a considerar.
+ */
+void listarIntersecoes(Grafo *g, char freq1, char freq2) {
+    if (freq1 == freq2) {
+        printf("As frequencias devem ser diferentes.\n");
+        return;
+    }
+
+    printf("Intersecoes entre antenas com frequencias '%c' e '%c':\n", freq1, freq2);
+
+    for (int i = 0; i < g->n_vertices; i++) {
+        if (g->vertices[i].freq == freq1) {
+            for (int j = 0; j < g->n_vertices; j++) {
+                if (g->vertices[j].freq == freq2) {
+                    printf("Antena [%c] em (%d,%d)  <->  Antena [%c] em (%d,%d)\n",
+                           freq1, g->vertices[i].x, g->vertices[i].y,
+                           freq2, g->vertices[j].x, g->vertices[j].y);
+                }
+            }
+        }
+    }
+}
+

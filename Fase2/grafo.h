@@ -9,6 +9,7 @@
  *
  */
 
+#include <stdbool.h>
 
 #ifndef GRAFO_H
 #define GRAFO_H
@@ -35,10 +36,11 @@ typedef struct grafo {
 
 void inicializaGrafo(Grafo *g);
 int adicionaVertice(Grafo *g, int x, int y, char freq);
-void adicionaAresta(Grafo *g, int orig, int dest);
+bool adicionaAresta(Grafo *g, int orig, int dest);
 void imprimeGrafo(Grafo *g);
-void dfs(Grafo *g, int start_id);
-void bfs(Grafo *g, int start_id);
-void listarCaminhos(Grafo *g, int origem, int destino);
+bool dfs(Grafo *g, int start_id);
+bool bfs(Grafo *g, int start_id);
+bool listarCaminhos(Grafo *g, int origem, int destino);
+void listarIntersecoes(Grafo *g, char freq1, char freq2);
 
 #endif

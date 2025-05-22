@@ -9,8 +9,8 @@
  *
  */
 
-
 #include <stdio.h>
+#include <stdbool.h>
 #include "grafo.h"
 #include "utils.h"
 
@@ -30,6 +30,7 @@ int main() {
         printf("2. DFS a partir de antena\n");
         printf("3. BFS a partir de antena\n");
         printf("4. Listar caminhos entre duas antenas\n");
+        printf("5. Intersecoes entre duas frequencias distintas\n");
         printf("0. Sair\n");
         printf("Opcao: ");
         scanf("%d", &opcao);
@@ -41,21 +42,37 @@ int main() {
             case 2:
                 printf("ID da antena de partida (0 a %d): ", g.n_vertices - 1);
                 scanf("%d", &id);
-                dfs(&g, id);
+                if (!dfs(&g, id)) {
+                    printf("Erro ao executar DFS. Verifique o ID introduzido.\n");
+                }
                 break;
             case 3:
                 printf("ID da antena de partida (0 a %d): ", g.n_vertices - 1);
                 scanf("%d", &id);
-                bfs(&g, id);
+                if (!bfs(&g, id)) {
+                    printf("Erro ao executar BFS. Verifique o ID introduzido.\n");
+                }
                 break;
-            case 4:
+            case 4: {
                 printf("ID da antena origem (0 a %d): ", g.n_vertices - 1);
                 scanf("%d", &id);
                 int destino;
                 printf("ID da antena destino (0 a %d): ", g.n_vertices - 1);
                 scanf("%d", &destino);
-                listarCaminhos(&g, id, destino);
+                if (!listarCaminhos(&g, id, destino)) {
+                    printf("Nao foi possivel listar caminhos. IDs invalidos ou frequencias diferentes.\n");
+                }
                 break;
+            }
+            case 5: {
+                char f1, f2;
+                printf("Introduza a primeira frequencia: ");
+                scanf(" %c", &f1);
+                printf("Introduza a segunda frequencia: ");
+                scanf(" %c", &f2);
+                listarIntersecoes(&g, f1, f2);  // esta continua a ser void
+                break;
+            }
             case 0:
                 printf("A sair...\n");
                 break;
