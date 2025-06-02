@@ -1,0 +1,49 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {portuges}{}\relax 
+\contentsline {chapter}{\numberline {1}Índice das estruturas de dados}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Estruturas de dados}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Índice dos ficheiros}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Lista de ficheiros}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Documentação da estruturas de dados}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Referência à estrutura Adj}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Referência à estrutura Grafo}{6}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Referência à estrutura Vertice}{6}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Documentação do ficheiro}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Referência ao ficheiro grafo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{9}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Descrição detalhada}{10}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Documentação das funções}{10}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}adicionaAresta()}{10}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}adicionaVertice()}{11}{subsubsection.4.1.2.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}bfs()}{12}{subsubsection.4.1.2.3}%
+\contentsline {subsubsection}{\numberline {4.1.2.4}dfs()}{13}{subsubsection.4.1.2.4}%
+\contentsline {subsubsection}{\numberline {4.1.2.5}imprimeGrafo()}{13}{subsubsection.4.1.2.5}%
+\contentsline {subsubsection}{\numberline {4.1.2.6}inicializaGrafo()}{14}{subsubsection.4.1.2.6}%
+\contentsline {subsubsection}{\numberline {4.1.2.7}listarCaminhos()}{14}{subsubsection.4.1.2.7}%
+\contentsline {subsubsection}{\numberline {4.1.2.8}listarIntersecoes()}{15}{subsubsection.4.1.2.8}%
+\contentsline {subsubsection}{\numberline {4.1.2.9}removerVertice()}{15}{subsubsection.4.1.2.9}%
+\contentsline {section}{\numberline {4.2}Referência ao ficheiro grafo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{16}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Descrição detalhada}{18}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Documentação das funções}{18}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}adicionaAresta()}{18}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}adicionaVertice()}{19}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}bfs()}{20}{subsubsection.4.2.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.2.4}dfs()}{21}{subsubsection.4.2.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.2.5}imprimeGrafo()}{22}{subsubsection.4.2.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.2.6}inicializaGrafo()}{22}{subsubsection.4.2.2.6}%
+\contentsline {subsubsection}{\numberline {4.2.2.7}listarCaminhos()}{23}{subsubsection.4.2.2.7}%
+\contentsline {subsubsection}{\numberline {4.2.2.8}listarIntersecoes()}{24}{subsubsection.4.2.2.8}%
+\contentsline {subsubsection}{\numberline {4.2.2.9}removerVertice()}{24}{subsubsection.4.2.2.9}%
+\contentsline {section}{\numberline {4.3}grafo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{25}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Referência ao ficheiro main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{26}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Descrição detalhada}{27}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Documentação das funções}{27}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}main()}{27}{subsubsection.4.4.2.1}%
+\contentsline {section}{\numberline {4.5}Referência ao ficheiro utils.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{29}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Descrição detalhada}{30}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Documentação das funções}{30}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}carregarMatrizParaGrafo()}{30}{subsubsection.4.5.2.1}%
+\contentsline {section}{\numberline {4.6}Referência ao ficheiro utils.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{31}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Descrição detalhada}{32}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Documentação das funções}{32}{subsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.1}carregarMatrizParaGrafo()}{32}{subsubsection.4.6.2.1}%
+\contentsline {section}{\numberline {4.7}utils.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{34}{section.4.7}%

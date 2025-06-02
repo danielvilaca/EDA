@@ -1,0 +1,57 @@
+\doxysection{grafo.\+h}
+\hypertarget{grafo_8h_source}{}\label{grafo_8h_source}\mbox{\hyperlink{grafo_8h}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ GRAFO\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ GRAFO\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_adj}{Adj}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}\ *dest;\ \textcolor{comment}{//\ Apontador\ para\ o\ vértice\ de\ destino\ da\ aresta}}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{struct_adj}{Adj}}\ *prox;\ \textcolor{comment}{//\ Apontador\ para\ o\ próximo\ nó\ na\ lista\ de\ adjacências}}
+\DoxyCodeLine{00022\ \}\mbox{\hyperlink{struct_adj}{Adj}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vertice}{Vertice}}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ id;\ \textcolor{comment}{//\ Identificador\ único\ do\ vértice}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;\ \textcolor{comment}{//\ Coordenadas\ da\ antena\ na\ matriz}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{char}\ freq;\ \textcolor{comment}{//\ Frequência/identificador\ da\ antena}}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{struct_adj}{Adj}}\ *lista;\ \textcolor{comment}{//\ Cabeça\ da\ lista\ de\ adjacências\ (arestas)}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}\ *next;\ \textcolor{comment}{//\ Apontador\ para\ o\ próximo\ vértice\ na\ lista\ de\ todos\ os\ vértices}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ visited;\ \textcolor{comment}{//\ Flag\ auxiliar\ para\ marcar\ vértices\ visitados\ em\ procuras\ (DFS/BFS)}}
+\DoxyCodeLine{00034\ \}\mbox{\hyperlink{struct_vertice}{Vertice}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}\ *head;\ \textcolor{comment}{//\ Apontador\ para\ o\ primeiro\ vértice\ da\ lista\ encadeada\ de\ vértices}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ n\_vertices;\ \textcolor{comment}{//\ Contador\ do\ número\ de\ vértices\ atualmente\ no\ grafo}}
+\DoxyCodeLine{00040\ \}\ \mbox{\hyperlink{struct_grafo}{Grafo}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{grafo_8h_a41f43196384519bc86cedaa2add15902}{inicializaGrafo}}(\mbox{\hyperlink{struct_grafo}{Grafo}}\ *g);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{grafo_8h_ad0e922e8998db2ce1b829ee52ed583a7}{adicionaVertice}}(\mbox{\hyperlink{struct_grafo}{Grafo}}\ *g,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{char}\ freq);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{grafo_8h_a561f52f455c12d2228679458b2c85036}{adicionaAresta}}(\mbox{\hyperlink{struct_grafo}{Grafo}}\ *g,\ \textcolor{keywordtype}{int}\ orig\_id,\ \textcolor{keywordtype}{int}\ dest\_id);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{grafo_8h_a4260eaefd00a66631206e5743ae47b88}{imprimeGrafo}}(\mbox{\hyperlink{struct_grafo}{Grafo}}\ *g);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00087\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{grafo_8h_ad1df7620bdb291ede0853ac7815a6937}{dfs}}(\mbox{\hyperlink{struct_grafo}{Grafo}}\ *g,\ \textcolor{keywordtype}{int}\ start\_id);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00097\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{grafo_8h_a7d878a968d6af056d4c8665b5fc62d5c}{bfs}}(\mbox{\hyperlink{struct_grafo}{Grafo}}\ *g,\ \textcolor{keywordtype}{int}\ start\_id);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00108\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{grafo_8h_abdd342ef55a469d73a6c0fe1a279b46a}{listarCaminhos}}(\mbox{\hyperlink{struct_grafo}{Grafo}}\ *g,\ \textcolor{keywordtype}{int}\ origem,\ \textcolor{keywordtype}{int}\ destino);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00117\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{grafo_8h_a950ef1dfae4238f3bf8ab590a3ba2852}{listarIntersecoes}}(\mbox{\hyperlink{struct_grafo}{Grafo}}\ *g,\ \textcolor{keywordtype}{char}\ freq1,\ \textcolor{keywordtype}{char}\ freq2);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00127\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{grafo_8h_acb55c0ef21696baaa4ca46eb7968f830}{removerVertice}}(\mbox{\hyperlink{struct_grafo}{Grafo}}\ *g,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

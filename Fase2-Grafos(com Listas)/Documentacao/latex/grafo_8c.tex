@@ -1,0 +1,488 @@
+\doxysection{Referência ao ficheiro grafo.\+c}
+\hypertarget{grafo_8c}{}\label{grafo_8c}\index{grafo.c@{grafo.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}grafo.\+h"{}}\newline
+Diagrama de dependências de inclusão para grafo.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{grafo_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{grafo_8c_a41f43196384519bc86cedaa2add15902}{inicializa\+Grafo}} (\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}g)
+\begin{DoxyCompactList}\small\item\em Inicializa o grafo como vazio. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{grafo_8c_ad0e922e8998db2ce1b829ee52ed583a7}{adiciona\+Vertice}} (\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}g, int x, int y, char freq)
+\begin{DoxyCompactList}\small\item\em Adiciona um novo vértice/antena ao grafo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{grafo_8c_a561f52f455c12d2228679458b2c85036}{adiciona\+Aresta}} (\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}g, int orig\+\_\+id, int dest\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Adiciona uma aresta entre dois vértices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{grafo_8c_a4260eaefd00a66631206e5743ae47b88}{imprime\+Grafo}} (\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}g)
+\begin{DoxyCompactList}\small\item\em Imprime o grafo em formato legível. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{grafo_8c_ad1df7620bdb291ede0853ac7815a6937}{dfs}} (\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}g, int start\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Executa Depth-\/\+First Search (DFS) a partir de um vértice dado. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{grafo_8c_a7d878a968d6af056d4c8665b5fc62d5c}{bfs}} (\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}g, int start\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Executa Breadth-\/\+First Search (BFS) a partir de um vértice dado. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{grafo_8c_abdd342ef55a469d73a6c0fe1a279b46a}{listar\+Caminhos}} (\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}g, int origem, int destino)
+\begin{DoxyCompactList}\small\item\em Lista todos os caminhos simples entre dois vértices de mesma frequência. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{grafo_8c_a950ef1dfae4238f3bf8ab590a3ba2852}{listar\+Intersecoes}} (\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}g, char freq1, char freq2)
+\begin{DoxyCompactList}\small\item\em Lista todas as combinações de pares de antenas de frequências distintas. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{grafo_8c_acb55c0ef21696baaa4ca46eb7968f830}{remover\+Vertice}} (\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}g, int id)
+\begin{DoxyCompactList}\small\item\em Remove um vértice do grafo, junto com todas as arestas incidentes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+\begin{DoxyAuthor}{Autor}
+Daniel Vilaça (\href{mailto:a16939@alunos.ipca.pt}{\texttt{ a16939@alunos.\+ipca.\+pt}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2025-\/05-\/31
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{grafo_8c_a561f52f455c12d2228679458b2c85036}\index{grafo.c@{grafo.c}!adicionaAresta@{adicionaAresta}}
+\index{adicionaAresta@{adicionaAresta}!grafo.c@{grafo.c}}
+\doxysubsubsection{\texorpdfstring{adicionaAresta()}{adicionaAresta()}}
+{\footnotesize\ttfamily \label{grafo_8c_a561f52f455c12d2228679458b2c85036} 
+bool adiciona\+Aresta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{orig\+\_\+id}{, }\item[{int}]{dest\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Adiciona uma aresta entre dois vértices. 
+
+Adiciona uma aresta não dirigida entre dois vértices do grafo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em g} & Apontador para o grafo que contém os vértices. \\
+\hline
+{\em orig\+\_\+id} & ID do vértice de origem. \\
+\hline
+{\em dest\+\_\+id} & ID do vértice de destino. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true Se a aresta for criada com sucesso ou já existir. 
+
+false Se "{}orig\+\_\+id"{} ou "{}dest\+\_\+id"{} forem inválidos, frequências diferentes, mesmo vértice, ou falha de memória. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}\ *v1\ =\ getVerticePorID(g,\ orig\_id);}
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}\ *v2\ =\ getVerticePorID(g,\ dest\_id);}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordflow}{if}\ (!v1\ ||\ !v2)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordflow}{if}\ (v1-\/>freq\ !=\ v2-\/>freq)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{if}\ (v1\ ==\ v2)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordflow}{if}\ (arestaExiste(v1,\ v2))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \mbox{\hyperlink{struct_adj}{Adj}}\ *a1\ =\ malloc(\textcolor{keyword}{sizeof}\ *a1);}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordflow}{if}\ (!a1)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00139\ \ \ \ \ a1-\/>dest\ =\ v2;}
+\DoxyCodeLine{00140\ \ \ \ \ a1-\/>prox\ =\ v1-\/>lista;}
+\DoxyCodeLine{00141\ \ \ \ \ v1-\/>lista\ =\ a1;}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{struct_adj}{Adj}}\ *a2\ =\ malloc(\textcolor{keyword}{sizeof}\ *a2);}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordflow}{if}\ (!a2)\ \{}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_adj}{Adj}}\ *undo\ =\ v1-\/>lista;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ v1-\/>lista\ =\ undo-\/>prox;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ free(undo);}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00151\ \ \ \ \ \}}
+\DoxyCodeLine{00152\ \ \ \ \ a2-\/>dest\ =\ v1;}
+\DoxyCodeLine{00153\ \ \ \ \ a2-\/>prox\ =\ v2-\/>lista;}
+\DoxyCodeLine{00154\ \ \ \ \ v2-\/>lista\ =\ a2;}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00157\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{grafo_8c_a561f52f455c12d2228679458b2c85036_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafo_8c_ad0e922e8998db2ce1b829ee52ed583a7}\index{grafo.c@{grafo.c}!adicionaVertice@{adicionaVertice}}
+\index{adicionaVertice@{adicionaVertice}!grafo.c@{grafo.c}}
+\doxysubsubsection{\texorpdfstring{adicionaVertice()}{adicionaVertice()}}
+{\footnotesize\ttfamily \label{grafo_8c_ad0e922e8998db2ce1b829ee52ed583a7} 
+int adiciona\+Vertice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{char}]{freq}{}\end{DoxyParamCaption})}
+
+
+
+Adiciona um novo vértice/antena ao grafo. 
+
+Adiciona um novo vértice (antena) ao grafo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em g} & Apontador para o grafo onde o vértice será inserido. \\
+\hline
+{\em x} & Coordenada x (coluna) da antena. \\
+\hline
+{\em y} & Coordenada y (linha) da antena. \\
+\hline
+{\em freq} & Char que representa a frequência/identificador da antena. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int ID atribuído ao novo vértice, ou -\/1 em caso de erro de alocação. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}\ *novo\ =\ malloc(\textcolor{keyword}{sizeof}\ *novo);}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{if}\ (!novo)\ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ novo-\/>id\ \ \ \ \ \ \ =\ g-\/>n\_vertices;}
+\DoxyCodeLine{00104\ \ \ \ \ novo-\/>x\ \ \ \ \ \ \ \ =\ x;}
+\DoxyCodeLine{00105\ \ \ \ \ novo-\/>y\ \ \ \ \ \ \ \ =\ y;}
+\DoxyCodeLine{00106\ \ \ \ \ novo-\/>freq\ \ \ \ \ =\ freq;}
+\DoxyCodeLine{00107\ \ \ \ \ novo-\/>lista\ \ \ \ =\ NULL;}
+\DoxyCodeLine{00108\ \ \ \ \ novo-\/>visited\ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//\ Cabeça\ da\ lista}}
+\DoxyCodeLine{00111\ \ \ \ \ novo-\/>next\ \ \ \ \ =\ g-\/>head;}
+\DoxyCodeLine{00112\ \ \ \ \ g-\/>head\ \ \ \ \ \ \ \ =\ novo;}
+\DoxyCodeLine{00113\ \ \ \ \ g-\/>n\_vertices++;}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordflow}{return}\ novo-\/>id;}
+\DoxyCodeLine{00116\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{grafo_8c_ad0e922e8998db2ce1b829ee52ed583a7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafo_8c_a7d878a968d6af056d4c8665b5fc62d5c}\index{grafo.c@{grafo.c}!bfs@{bfs}}
+\index{bfs@{bfs}!grafo.c@{grafo.c}}
+\doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
+{\footnotesize\ttfamily \label{grafo_8c_a7d878a968d6af056d4c8665b5fc62d5c} 
+bool bfs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{start\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Executa Breadth-\/\+First Search (BFS) a partir de um vértice dado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em g} & Apontador para o grafo onde será feita a BFS. \\
+\hline
+{\em start\+\_\+id} & Identificador do vértice inicial da procura. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true Se a procura for executada (mesmo que visite apenas um vértice). 
+
+false Se {\ttfamily start\+\_\+id} não corresponder a nenhum vértice ou falhar alocação. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}\ *start\ =\ getVerticePorID(g,\ start\_id);}
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keywordflow}{if}\ (!start)\ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}ID\ invalido.\(\backslash\)n"{}});}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00231\ \ \ \ \ \}}
+\DoxyCodeLine{00232\ \ \ \ \ clearVisited(g);}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}\ **fila\ =\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_vertice}{Vertice}}\ *)\ *\ g-\/>n\_vertices);}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordflow}{if}\ (!fila)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordtype}{int}\ ini\ =\ 0,\ fim\ =\ 0;}
+\DoxyCodeLine{00239\ \ \ \ \ fila[fim++]\ =\ start;}
+\DoxyCodeLine{00240\ \ \ \ \ start-\/>visited\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00241\ \ \ \ \ printf(\textcolor{stringliteral}{"{}BFS\ a\ partir\ da\ antena\ \%d\(\backslash\)n"{}},\ start\_id);}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keywordflow}{while}\ (ini\ <\ fim)\ \{}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}\ *v\ =\ fila[ini++];}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Visitado\ BFS:\ Antena\ \%d\ [\%c]\ em\ (\%d,\%d)\(\backslash\)n"{}},}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v-\/>id,\ v-\/>freq,\ v-\/>x,\ v-\/>y);}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{struct_adj}{Adj}}\ *a\ =\ v-\/>lista;\ a;\ a\ =\ a-\/>prox)\ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!a-\/>dest-\/>visited)\ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ a-\/>dest-\/>visited\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fila[fim++]\ =\ a-\/>dest;}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00253\ \ \ \ \ \}}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00255\ \ \ \ \ free(fila);}
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00257\ \}}
+
+\end{DoxyCode}
+\Hypertarget{grafo_8c_ad1df7620bdb291ede0853ac7815a6937}\index{grafo.c@{grafo.c}!dfs@{dfs}}
+\index{dfs@{dfs}!grafo.c@{grafo.c}}
+\doxysubsubsection{\texorpdfstring{dfs()}{dfs()}}
+{\footnotesize\ttfamily \label{grafo_8c_ad1df7620bdb291ede0853ac7815a6937} 
+bool dfs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{start\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Executa Depth-\/\+First Search (DFS) a partir de um vértice dado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em g} & Apontador para o grafo onde será feita a DFS. \\
+\hline
+{\em start\+\_\+id} & ID do vértice inicial da procura. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true Se a procura for executada (mesmo que encontre apenas um vértice). 
+
+false Se "{}start\+\_\+id"{} não corresponder a nenhum vértice existente. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}\ *start\ =\ getVerticePorID(g,\ start\_id);}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordflow}{if}\ (!start)\ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}ID\ invalido.\(\backslash\)n"{}});}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00210\ \ \ \ \ \}}
+\DoxyCodeLine{00211\ \ \ \ \ clearVisited(g);}
+\DoxyCodeLine{00212\ \ \ \ \ printf(\textcolor{stringliteral}{"{}DFS\ a\ partir\ da\ antena\ \%d\(\backslash\)n"{}},\ start\_id);}
+\DoxyCodeLine{00213\ \ \ \ \ dfs\_rec(start);}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00215\ \}}
+
+\end{DoxyCode}
+\Hypertarget{grafo_8c_a4260eaefd00a66631206e5743ae47b88}\index{grafo.c@{grafo.c}!imprimeGrafo@{imprimeGrafo}}
+\index{imprimeGrafo@{imprimeGrafo}!grafo.c@{grafo.c}}
+\doxysubsubsection{\texorpdfstring{imprimeGrafo()}{imprimeGrafo()}}
+{\footnotesize\ttfamily \label{grafo_8c_a4260eaefd00a66631206e5743ae47b88} 
+void imprime\+Grafo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+
+
+Imprime o grafo em formato legível. 
+
+Imprime o grafo de forma legível, listando cada vértice e as suas adjacências.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em g} & Apontador para o grafo a ser impresso. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ g-\/>n\_vertices;\ i++)\ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}\ *v\ =\ getVerticePorID(g,\ i);}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!v)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Antena\ \%d\ [\%c]\ em\ (\%d,\%d)\ -\/>\ "{}},}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v-\/>id,\ v-\/>freq,\ v-\/>x,\ v-\/>y);}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{struct_adj}{Adj}}\ *a\ =\ v-\/>lista;\ a;\ a\ =\ a-\/>prox)\ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ a-\/>dest-\/>id);}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00176\ \ \ \ \ \}}
+\DoxyCodeLine{00177\ \}}
+
+\end{DoxyCode}
+\Hypertarget{grafo_8c_a41f43196384519bc86cedaa2add15902}\index{grafo.c@{grafo.c}!inicializaGrafo@{inicializaGrafo}}
+\index{inicializaGrafo@{inicializaGrafo}!grafo.c@{grafo.c}}
+\doxysubsubsection{\texorpdfstring{inicializaGrafo()}{inicializaGrafo()}}
+{\footnotesize\ttfamily \label{grafo_8c_a41f43196384519bc86cedaa2add15902} 
+void inicializa\+Grafo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+
+
+Inicializa o grafo como vazio. 
+
+Inicializa um grafo vazio.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em g} & Apontador para o grafo a ser inicializado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ g-\/>head\ =\ NULL;}
+\DoxyCodeLine{00086\ \ \ \ \ g-\/>n\_vertices\ =\ 0;}
+\DoxyCodeLine{00087\ \}}
+
+\end{DoxyCode}
+\Hypertarget{grafo_8c_abdd342ef55a469d73a6c0fe1a279b46a}\index{grafo.c@{grafo.c}!listarCaminhos@{listarCaminhos}}
+\index{listarCaminhos@{listarCaminhos}!grafo.c@{grafo.c}}
+\doxysubsubsection{\texorpdfstring{listarCaminhos()}{listarCaminhos()}}
+{\footnotesize\ttfamily \label{grafo_8c_abdd342ef55a469d73a6c0fe1a279b46a} 
+bool listar\+Caminhos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{origem}{, }\item[{int}]{destino}{}\end{DoxyParamCaption})}
+
+
+
+Lista todos os caminhos simples entre dois vértices de mesma frequência. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em g} & Apontador para o grafo onde serão procurados os caminhos. \\
+\hline
+{\em origem} & ID do vértice de origem. \\
+\hline
+{\em destino} & ID do vértice de destino. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true Se os caminhos foram listados (ou se pelo menos tentativa foi válida). 
+
+false Se IDs inválidos ou frequências diferentes. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00306\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}\ *src\ =\ getVerticePorID(g,\ origem);}
+\DoxyCodeLine{00307\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}\ *dst\ =\ getVerticePorID(g,\ destino);}
+\DoxyCodeLine{00308\ \ \ \ \ \textcolor{keywordflow}{if}\ (!src\ ||\ !dst)\ \{}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}ID\ invalido.\(\backslash\)n"{}});}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00311\ \ \ \ \ \}}
+\DoxyCodeLine{00312\ \ \ \ \ \textcolor{keywordflow}{if}\ (src-\/>freq\ !=\ dst-\/>freq)\ \{}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Antenas\ com\ frequencias\ diferentes\ nao\ estao\ ligadas.\(\backslash\)n"{}});}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00315\ \ \ \ \ \}}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00317\ \ \ \ \ clearVisited(g);}
+\DoxyCodeLine{00318\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}\ **stack\ =\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_vertice}{Vertice}}\ *)\ *\ g-\/>n\_vertices);}
+\DoxyCodeLine{00319\ \ \ \ \ \textcolor{keywordflow}{if}\ (!stack)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00321\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Caminhos\ entre\ \%d\ e\ \%d:\(\backslash\)n"{}},\ origem,\ destino);}
+\DoxyCodeLine{00322\ \ \ \ \ listarCaminhosRec(src,\ dst,\ stack,\ 0);}
+\DoxyCodeLine{00323\ \ \ \ \ free(stack);}
+\DoxyCodeLine{00324\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00325\ \}}
+
+\end{DoxyCode}
+\Hypertarget{grafo_8c_a950ef1dfae4238f3bf8ab590a3ba2852}\index{grafo.c@{grafo.c}!listarIntersecoes@{listarIntersecoes}}
+\index{listarIntersecoes@{listarIntersecoes}!grafo.c@{grafo.c}}
+\doxysubsubsection{\texorpdfstring{listarIntersecoes()}{listarIntersecoes()}}
+{\footnotesize\ttfamily \label{grafo_8c_a950ef1dfae4238f3bf8ab590a3ba2852} 
+void listar\+Intersecoes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{char}]{freq1}{, }\item[{char}]{freq2}{}\end{DoxyParamCaption})}
+
+
+
+Lista todas as combinações de pares de antenas de frequências distintas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em g} & Apontador para o grafo onde se procura as interseções. \\
+\hline
+{\em freq1} & Char da primeira frequência. \\
+\hline
+{\em freq2} & Char da segunda frequência. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00336\ \ \ \ \ \textcolor{keywordflow}{if}\ (freq1\ ==\ freq2)\ \{}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}As\ frequencias\ devem\ ser\ diferentes.\(\backslash\)n"{}});}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00339\ \ \ \ \ \}}
+\DoxyCodeLine{00340\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Intersecoes\ entre\ antenas\ com\ frequencias\ '\%c'\ e\ '\%c':\(\backslash\)n"{}},}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ freq1,\ freq2);}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00343\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{struct_vertice}{Vertice}}\ *v\ =\ g-\/>head;\ v;\ v\ =\ v-\/>next)\ \{}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (v-\/>freq\ ==\ freq1)\ \{}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{struct_vertice}{Vertice}}\ *w\ =\ g-\/>head;\ w;\ w\ =\ w-\/>next)\ \{}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (w-\/>freq\ ==\ freq2)\ \{}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Antena\ [\%c]\ em\ (\%d,\%d)\ \ <-\/>\ \ Antena\ [\%c]\ em\ (\%d,\%d)\(\backslash\)n"{}},}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ freq1,\ v-\/>x,\ v-\/>y,}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ freq2,\ w-\/>x,\ w-\/>y);}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00353\ \ \ \ \ \}}
+\DoxyCodeLine{00354\ \}}
+
+\end{DoxyCode}
+\Hypertarget{grafo_8c_acb55c0ef21696baaa4ca46eb7968f830}\index{grafo.c@{grafo.c}!removerVertice@{removerVertice}}
+\index{removerVertice@{removerVertice}!grafo.c@{grafo.c}}
+\doxysubsubsection{\texorpdfstring{removerVertice()}{removerVertice()}}
+{\footnotesize\ttfamily \label{grafo_8c_acb55c0ef21696baaa4ca46eb7968f830} 
+bool remover\+Vertice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Remove um vértice do grafo, junto com todas as arestas incidentes. 
+
+Remove um vértice do grafo, juntamente com todas as arestas incidentes.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em g} & Apontador para o grafo onde está o vértice. \\
+\hline
+{\em id} & Identificador do vértice a ser removido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true Se o vértice existia e foi removido com sucesso. 
+
+false Se não houver vértice com esse ID. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00366\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}\ *alvo\ =\ getVerticePorID(g,\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00367\ \ \ \ \ \textcolor{keywordflow}{if}\ (!alvo)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00368\ }
+\DoxyCodeLine{00369\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{struct_vertice}{Vertice}}\ *v\ =\ g-\/>head;\ v;\ v\ =\ v-\/>next)\ \{}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (v\ !=\ alvo)\ \{}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ removerArestaDireta(v,\ alvo);}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00373\ \ \ \ \ \}}
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00375\ \ \ \ \ \mbox{\hyperlink{struct_adj}{Adj}}\ *a\ =\ alvo-\/>lista;}
+\DoxyCodeLine{00376\ \ \ \ \ \textcolor{keywordflow}{while}\ (a)\ \{}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_adj}{Adj}}\ *aux\ =\ a-\/>prox;}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ free(a);}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ a\ =\ aux;}
+\DoxyCodeLine{00380\ \ \ \ \ \}}
+\DoxyCodeLine{00381\ }
+\DoxyCodeLine{00382\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}\ *prev\ =\ NULL,\ *cur\ =\ g-\/>head;}
+\DoxyCodeLine{00383\ \ \ \ \ \textcolor{keywordflow}{while}\ (cur)\ \{}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cur\ ==\ alvo)\ \{}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (prev)\ prev-\/>next\ =\ cur-\/>next;}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \ \ \ \ \ g-\/>head\ =\ cur-\/>next;}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ free(cur);}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ prev\ =\ cur;}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ cur\ \ =\ cur-\/>next;}
+\DoxyCodeLine{00392\ \ \ \ \ \}}
+\DoxyCodeLine{00393\ }
+\DoxyCodeLine{00394\ \ \ \ \ g-\/>n\_vertices-\/-\/;}
+\DoxyCodeLine{00395\ }
+\DoxyCodeLine{00396\ \ \ \ \ \textcolor{keywordtype}{int}\ contador\ =\ 0;}
+\DoxyCodeLine{00397\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{struct_vertice}{Vertice}}\ *v\ =\ g-\/>head;\ v;\ v\ =\ v-\/>next)\ \{}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ v-\/>id\ =\ contador++;}
+\DoxyCodeLine{00399\ \ \ \ \ \}}
+\DoxyCodeLine{00400\ }
+\DoxyCodeLine{00401\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00402\ \}}
+
+\end{DoxyCode}
