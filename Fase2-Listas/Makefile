@@ -3,7 +3,7 @@ CFLAGS  := -Wall -Wextra -pedantic -std=c11 -O2
 
 SRC     := $(wildcard *.c)
 OBJ     := $(SRC:.c=.o)
-BIN     := teste2
+BIN     := teste3
 
 all: $(BIN)
 

@@ -1,9 +1,26 @@
+/**
+ * @file main.c
+ * @author Daniel Vilaça (a16939@alunos.ipca.pt)
+ * @brief
+ * @version 1.0
+ * @date 2025-05-31
+ *
+ * @copyright Copyright (c) 2025
+ *
+ */
+
+
 #include <stdio.h>
 #include <stdbool.h>
 #include "grafo.h"
 #include "utils.h"
 
 
+/**
+ * @brief 
+ *
+ * @param g
+ */
 static void clearFlags(Grafo *g) {
     for (Vertice *v = g->head; v; v = v->next) {
         v->visited = false;
