@@ -55,7 +55,7 @@ static void removerArestaDireta(Vertice *src, Vertice *dest) {
     while (cur) {
         if (cur->dest == dest) {
             if (prev) prev->prox = cur->prox;
-            else       src->lista = cur->prox;
+            else src->lista = cur->prox;
             free(cur);
             return;
         }
@@ -100,16 +100,16 @@ int adicionaVertice(Grafo *g, int x, int y, char freq) {
     Vertice *novo = malloc(sizeof *novo);
     if (!novo) return -1;
 
-    novo->id       = g->n_vertices;
-    novo->x        = x;
-    novo->y        = y;
-    novo->freq     = freq;
-    novo->lista    = NULL;
-    novo->visited  = false;
+    novo->id = g->n_vertices;
+    novo->x = x;
+    novo->y = y;
+    novo->freq = freq;
+    novo->lista = NULL;
+    novo->visited = false;
 
-    // Cabeça da lista
-    novo->next     = g->head;
-    g->head        = novo;
+    //Cabeça da lista
+    novo->next = g->head;
+    g->head = novo;
     g->n_vertices++;
 
     return novo->id;
@@ -128,6 +128,7 @@ int adicionaVertice(Grafo *g, int x, int y, char freq) {
 bool adicionaAresta(Grafo *g, int orig_id, int dest_id) {
     Vertice *v1 = getVerticePorID(g, orig_id);
     Vertice *v2 = getVerticePorID(g, dest_id);
+
     if (!v1 || !v2) return false;
     if (v1->freq != v2->freq) return false;
     if (v1 == v2) return false;
@@ -238,6 +239,7 @@ bool bfs(Grafo *g, int start_id) {
     int ini = 0, fim = 0;
     fila[fim++] = start;
     start->visited = true;
+
     printf("BFS a partir da antena %d\n", start_id);
 
     while (ini < fim) {
@@ -265,8 +267,7 @@ bool bfs(Grafo *g, int start_id) {
  * @param stack Vetor de Apontadors para Vertice que armazena o caminho atual.
  * @param depth Profundidade/índice atual em `stack`.
  */
-static void listarCaminhosRec(Vertice *cur, Vertice *dst,
-                              Vertice **stack, int depth) {
+static void listarCaminhosRec(Vertice *cur, Vertice *dst, Vertice **stack, int depth) {
     cur->visited = true;
     stack[depth] = cur;
 
@@ -383,7 +384,7 @@ bool removerVertice(Grafo *g, int id) {
     while (cur) {
         if (cur == alvo) {
             if (prev) prev->next = cur->next;
-            else      g->head = cur->next;
+            else g->head = cur->next;
             free(cur);
             break;
         }
