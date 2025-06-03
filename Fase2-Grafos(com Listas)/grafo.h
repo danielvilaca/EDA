@@ -14,16 +14,18 @@
 
 #include <stdbool.h>
 
+typedef struct Adj Adj;
+typedef struct Vertice Vertice;
 
 
-typedef struct Adj {
+ struct Adj {
     Vertice *dest; // Apontador para o vértice de destino da aresta
     Adj *prox; // Apontador para o próximo nó na lista de adjacências
-}Adj;
+};
 
 
 
-typedef struct Vertice {
+struct Vertice {
     int id; // Identificador único do vértice
     int x, y; // Coordenadas da antena na matriz
     char freq; // Frequência/identificador da antena
@@ -31,7 +33,7 @@ typedef struct Vertice {
     Vertice *next; // Apontador para o próximo vértice na lista de todos os vértices
 
     bool visited; // Flag auxiliar para marcar vértices visitados em procuras (DFS/BFS)
-}Vertice;
+};
 
 
 typedef struct {
